@@ -1,0 +1,71 @@
+{
+  "summary": {
+    "total_tests": 8,
+    "passed": 6,
+    "failed": 2,
+    "errors": 0,
+    "pass_rate": "75.0%",
+    "average_execution_time_seconds": "59.24"
+  },
+  "metric_averages": {
+    "onetrust_validation": "87.50%",
+    "cmdb_validation": "75.00%",
+    "parecer_suggestion_accuracy": "76.25%",
+    "ressalvas_detection": "67.50%",
+    "confidence_score_validity": "75.00%",
+    "alertas_detection": "100.00%",
+    "bloqueio_detection": "100.00%",
+    "response_completeness": "90.00%"
+  },
+  "test_results": [
+    {
+      "test_id": "TC-001",
+      "scenario": "Renovação - Histórico Favorável",
+      "status": "PASS",
+      "average_score": 1.0
+    },
+    {
+      "test_id": "TC-002",
+      "scenario": "Nova Contratação - Armazena Dados BV",
+      "status": "FAIL",
+      "average_score": 0.275
+    },
+    {
+      "test_id": "TC-003",
+      "scenario": "Renovação - Sistema Legado para Desinvestir",
+      "status": "PASS",
+      "average_score": 0.9125
+    },
+    {
+      "test_id": "TC-004",
+      "scenario": "Renovação - Vencimento > 2 Anos (Alerta)",
+      "status": "PASS",
+      "average_score": 0.9625
+    },
+    {
+      "test_id": "TC-005",
+      "scenario": "Renovação - Vencimento Ausente (BLOQUEIO)",
+      "status": "FAIL",
+      "average_score": 0.6875
+    },
+    {
+      "test_id": "TC-006",
+      "scenario": "Nova Contratação - Múltiplas Integrações",
+      "status": "PASS",
+      "average_score": 1.0
+    },
+    {
+      "test_id": "TC-007",
+      "scenario": "Nova Contratação - Fluxo INBOUND",
+      "status": "PASS",
+      "average_score": 0.875
+    },
+    {
+      "test_id": "TC-008",
+      "scenario": "Renovação - Direcionador Manter",
+      "status": "PASS",
+      "average_score": 1.0
+    }
+  ],
+  "timestamp": "2025-11-29T22:41:34.872632"
+}

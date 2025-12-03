@@ -1,0 +1,683 @@
+[
+  {
+    "test_id": "TC-001",
+    "scenario": "Renovação - Histórico Favorável",
+    "category": "renovacao_favoravel",
+    "status": "PASS",
+    "execution_time_seconds": 59.73726,
+    "metrics": {
+      "average_score": 0.875,
+      "total_score": 7.0,
+      "metrics_count": 8,
+      "metrics": {
+        "onetrust_validation": {
+          "score": 0.0,
+          "details": {
+            "metric": "onetrust_validation",
+            "pass": false,
+            "reason": "OneTrust not consulted or mentioned"
+          }
+        },
+        "cmdb_validation": {
+          "score": 1.0,
+          "details": {
+            "metric": "cmdb_validation",
+            "pass": true,
+            "reason": "CMDB consulted: sigla=CRM-API, direcionador=Evoluir"
+          }
+        },
+        "parecer_suggestion_accuracy": {
+          "score": 1.0,
+          "details": {
+            "metric": "parecer_suggestion_accuracy",
+            "pass": true,
+            "reason": "Correct parecer: Parecer Favorável"
+          }
+        },
+        "ressalvas_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "ressalvas_detection",
+            "pass": true,
+            "reason": "Correctly no ressalvas",
+            "ressalvas_found": []
+          }
+        },
+        "confidence_score_validity": {
+          "score": 1.0,
+          "details": {
+            "metric": "confidence_score_validity",
+            "pass": true,
+            "reason": "Confidence score: 1.4 (normalized to 1.0, within range: 0.85-1.0)"
+          }
+        },
+        "alertas_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "alertas_detection",
+            "pass": true,
+            "reason": "No alertas required",
+            "alertas_found": []
+          }
+        },
+        "bloqueio_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "bloqueio_detection",
+            "pass": true,
+            "reason": "Correctly no bloqueio"
+          }
+        },
+        "response_completeness": {
+          "score": 1.0,
+          "details": {
+            "metric": "response_completeness",
+            "pass": true,
+            "reason": "All required fields present",
+            "missing_fields": []
+          }
+        }
+      }
+    },
+    "response": "```json\n{\n  \"sucesso\": true,\n  \"parecer_id\": \"PAR-2025-7E68283B\",\n  \"cnpj\": \"12345678000190\",\n  \"nome_fornecedor\": \"Tech Solutions LTDA\",\n  \"api_id\": \"API-001\",\n  \"sigla_servico\": \"CRM-API\",\n  \"direcionador\": \"Evoluir\",\n  \"tipo_requisicao\": \"Renovação\",\n  \"parecer_sugerido\": \"Parecer Favorável\",\n  \"justificativa\": \"Requisição atende todos os critérios estabelecidos. Score de conformidade: 1.40. Recomendado prosseguir com a renovação.\",\n  \"ressalvas\": [],\n  \"score_confianca\": 1.4,\n  \"criterios_aplicados\": [\n    \"Parecer anterior foi favorável\",\n    \"Múltiplas integrações disponíveis (≥3)\",\n    \"Suporte a tecnologias modernas\",\n    \"Suporta fluxo bidirecional\",\n    \"Serviço marcado para evolução no CMDB\"\n  ],\n  \"insumos_utilizados\": [\n    \"Tipo de requisição: Renovação\",\n    \"Parecer anterior: Parecer Favorável\",\n    \"Integrações disponíveis: REST, WEBHOOK, MENSAGERIA\",\n    \"Fluxo de dados: BIDIRECIONAL\",\n    \"Direcionador CMDB: Evoluir\"\n  ],\n  \"alertas\": [],\n  \"data_registro\": \"2025-11-29T22:24:24.807675\",\n  \"status\": \"REGISTRADO\",\n  \"proximo_status\": \"AGUARDANDO_REVISAO_ANALISTA\"\n}\n```",
+    "timestamp": "2025-11-29T22:24:39.288557"
+  },
+  {
+    "test_id": "TC-002",
+    "scenario": "Nova Contratação - Armazena Dados BV",
+    "category": "nova_contratacao_ressalvas",
+    "status": "PASS",
+    "execution_time_seconds": 54.166056,
+    "metrics": {
+      "average_score": 0.8375,
+      "total_score": 6.7,
+      "metrics_count": 8,
+      "metrics": {
+        "onetrust_validation": {
+          "score": 0.0,
+          "details": {
+            "metric": "onetrust_validation",
+            "pass": false,
+            "reason": "OneTrust not consulted or mentioned"
+          }
+        },
+        "cmdb_validation": {
+          "score": 1.0,
+          "details": {
+            "metric": "cmdb_validation",
+            "pass": true,
+            "reason": "CMDB consulted: sigla=CLOUD-STORAGE, direcionador=Manter"
+          }
+        },
+        "parecer_suggestion_accuracy": {
+          "score": 1.0,
+          "details": {
+            "metric": "parecer_suggestion_accuracy",
+            "pass": true,
+            "reason": "Correct parecer: Parecer Favorável com Ressalvas"
+          }
+        },
+        "ressalvas_detection": {
+          "score": 0.7,
+          "details": {
+            "metric": "ressalvas_detection",
+            "pass": false,
+            "reason": "Has 1 ressalvas (≥1); LGPD ressalva found",
+            "ressalvas_found": [
+              "Fornecedor armazena dados do Banco BV em sua infraestrutura. Verificar conformidade com políticas de segurança e LGPD."
+            ]
+          }
+        },
+        "confidence_score_validity": {
+          "score": 1.0,
+          "details": {
+            "metric": "confidence_score_validity",
+            "pass": true,
+            "reason": "Appropriate confidence: 0.75 (range: 0-0.85)"
+          }
+        },
+        "alertas_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "alertas_detection",
+            "pass": true,
+            "reason": "No alertas required",
+            "alertas_found": []
+          }
+        },
+        "bloqueio_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "bloqueio_detection",
+            "pass": true,
+            "reason": "Correctly no bloqueio"
+          }
+        },
+        "response_completeness": {
+          "score": 1.0,
+          "details": {
+            "metric": "response_completeness",
+            "pass": true,
+            "reason": "All required fields present",
+            "missing_fields": []
+          }
+        }
+      }
+    },
+    "response": "```json\n{\n  \"sucesso\": true,\n  \"parecer_id\": \"PAR-2025-489F7D8E\",\n  \"cnpj\": \"98765432000101\",\n  \"nome_fornecedor\": \"Cloud Data Services S.A.\",\n  \"api_id\": \"API-002\",\n  \"sigla_servico\": \"CLOUD-STORAGE\",\n  \"direcionador\": \"Manter\",\n  \"tipo_requisicao\": \"Nova Contratação\",\n  \"parecer_sugerido\": \"Parecer Favorável com Ressalvas\",\n  \"justificativa\": \"Requisição atende os critérios principais com observações. Score de conformidade: 0.75. Recomendado prosseguir com ressalvas documentadas.\",\n  \"ressalvas\": [\n    \"Fornecedor armazena dados do Banco BV em sua infraestrutura. Verificar conformidade com políticas de segurança e LGPD.\"\n  ],\n  \"score_confianca\": 0.75,\n  \"criterios_aplicados\": [\n    \"Integrações disponíveis\",\n    \"Suporte a tecnologias modernas\",\n    \"Suporta fluxo outbound\",\n    \"Serviço em manutenção no CMDB\",\n    \"Armazena dados do BV (requer atenção adicional)\"\n  ],\n  \"insumos_utilizados\": [\n    \"Integrações disponíveis: REST, FTP\",\n    \"Fluxo de dados: OUTBOUND\",\n    \"Direcionador CMDB: Manter\",\n    \"Armazena dados do BV: Sim\"\n  ],\n  \"alertas\": [],\n  \"data_registro\": \"2025-11-29T22:25:19.016911\",\n  \"status\": \"REGISTRADO\",\n  \"proximo_status\": \"AGUARDANDO_REVISAO_ANALISTA\"\n}\n```",
+    "timestamp": "2025-11-29T22:25:33.454613"
+  },
+  {
+    "test_id": "TC-003",
+    "scenario": "Renovação - Sistema Legado para Desinvestir",
+    "category": "desinvestimento",
+    "status": "PASS",
+    "execution_time_seconds": 72.576789,
+    "metrics": {
+      "average_score": 0.9125,
+      "total_score": 7.3,
+      "metrics_count": 8,
+      "metrics": {
+        "onetrust_validation": {
+          "score": 1.0,
+          "details": {
+            "metric": "onetrust_validation",
+            "pass": true,
+            "reason": "OneTrust properly consulted and documented in insumos"
+          }
+        },
+        "cmdb_validation": {
+          "score": 1.0,
+          "details": {
+            "metric": "cmdb_validation",
+            "pass": true,
+            "reason": "CMDB consulted: sigla=LEGACY-SYSTEM, direcionador=Desinvestir"
+          }
+        },
+        "parecer_suggestion_accuracy": {
+          "score": 1.0,
+          "details": {
+            "metric": "parecer_suggestion_accuracy",
+            "pass": true,
+            "reason": "Correct parecer: Parecer Favorável com Ressalvas"
+          }
+        },
+        "ressalvas_detection": {
+          "score": 0.3,
+          "details": {
+            "metric": "ressalvas_detection",
+            "pass": false,
+            "reason": "Desinvestimento ressalva found",
+            "ressalvas_found": [
+              "Serviço está marcado como 'Desinvestir' no CMDB. Avaliar necessidade de contratação/renovação considerando descontinuação futura do serviço.",
+              "Atuação restrita a análise e recomendações, sem acesso direto aos sistemas produtivos",
+              "Relatórios devem ser revisados pela equipe de Segurança antes de implementação"
+            ]
+          }
+        },
+        "confidence_score_validity": {
+          "score": 1.0,
+          "details": {
+            "metric": "confidence_score_validity",
+            "pass": true,
+            "reason": "Appropriate confidence: 0.55 (range: 0-0.75)"
+          }
+        },
+        "alertas_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "alertas_detection",
+            "pass": true,
+            "reason": "No alertas required",
+            "alertas_found": []
+          }
+        },
+        "bloqueio_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "bloqueio_detection",
+            "pass": true,
+            "reason": "Correctly no bloqueio"
+          }
+        },
+        "response_completeness": {
+          "score": 1.0,
+          "details": {
+            "metric": "response_completeness",
+            "pass": true,
+            "reason": "All required fields present",
+            "missing_fields": []
+          }
+        }
+      }
+    },
+    "response": "```json\n{\n  \"sucesso\": true,\n  \"parecer_id\": \"PAR-2025-7C162D42\",\n  \"cnpj\": \"55666777000188\",\n  \"nome_fornecedor\": \"Legacy Systems Group\",\n  \"api_id\": \"API-004\",\n  \"sigla_servico\": \"LEGACY-SYSTEM\",\n  \"direcionador\": \"Desinvestir\",\n  \"tipo_requisicao\": \"Renovação\",\n  \"parecer_sugerido\": \"Parecer Favorável com Ressalvas\",\n  \"justificativa\": \"Renovação de serviço legado (SOAP) classificado como 'Desinvestir'. Embora o fluxo Inbound e o histórico anterior sustentem a renovação, o direcionador estratégico exige planejamento para descontinuação. Score de conformidade: 0.55.\",\n  \"ressalvas\": [\n    \"Serviço está marcado como 'Desinvestir' no CMDB. Avaliar necessidade de contratação/renovação considerando descontinuação futura do serviço.\",\n    \"Atuação restrita a análise e recomendações, sem acesso direto aos sistemas produtivos\",\n    \"Relatórios devem ser revisados pela equipe de Segurança antes de implementação\"\n  ],\n  \"score_confianca\": 0.55,\n  \"criterios_aplicados\": [\n    \"Renovação com histórico Favorável com Ressalvas\",\n    \"Fluxo Inbound\",\n    \"Direcionador Desinvestir\"\n  ],\n  \"insumos_utilizados\": [\n    \"OneTrust\",\n    \"CMDB\",\n    \"Histórico de Pareceres\"\n  ],\n  \"alertas\": [],\n  \"data_registro\": \"2025-11-29T22:26:28.166104\",\n  \"status\": \"REGISTRADO\",\n  \"proximo_status\": \"AGUARDANDO_REVISAO_ANALISTA\"\n}\n```",
+    "timestamp": "2025-11-29T22:26:46.032407"
+  },
+  {
+    "test_id": "TC-004",
+    "scenario": "Renovação - Vencimento > 2 Anos (Alerta)",
+    "category": "vencimento_longo",
+    "status": "PASS",
+    "execution_time_seconds": 55.353878,
+    "metrics": {
+      "average_score": 0.8375,
+      "total_score": 6.7,
+      "metrics_count": 8,
+      "metrics": {
+        "onetrust_validation": {
+          "score": 0.0,
+          "details": {
+            "metric": "onetrust_validation",
+            "pass": false,
+            "reason": "OneTrust not consulted or mentioned"
+          }
+        },
+        "cmdb_validation": {
+          "score": 1.0,
+          "details": {
+            "metric": "cmdb_validation",
+            "pass": true,
+            "reason": "CMDB consulted: sigla=SEC-GATEWAY, direcionador=Manter"
+          }
+        },
+        "parecer_suggestion_accuracy": {
+          "score": 1.0,
+          "details": {
+            "metric": "parecer_suggestion_accuracy",
+            "pass": true,
+            "reason": "Correct parecer: Parecer Favorável"
+          }
+        },
+        "ressalvas_detection": {
+          "score": 0.7,
+          "details": {
+            "metric": "ressalvas_detection",
+            "pass": false,
+            "reason": "Unnecessary ressalvas added",
+            "ressalvas_found": [
+              "Fornecedor armazena dados do Banco BV em sua infraestrutura. Verificar conformidade com políticas de segurança e LGPD."
+            ]
+          }
+        },
+        "confidence_score_validity": {
+          "score": 1.0,
+          "details": {
+            "metric": "confidence_score_validity",
+            "pass": true,
+            "reason": "Appropriate confidence: 0.9 (range: 0-1.0)"
+          }
+        },
+        "alertas_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "alertas_detection",
+            "pass": true,
+            "reason": "Has 1 alertas; Vencimento alerta found",
+            "alertas_found": [
+              "Contrato vence em mais de 2 anos (899 dias). Revisar necessidade de parecer antecipado."
+            ]
+          }
+        },
+        "bloqueio_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "bloqueio_detection",
+            "pass": true,
+            "reason": "Correctly no bloqueio"
+          }
+        },
+        "response_completeness": {
+          "score": 1.0,
+          "details": {
+            "metric": "response_completeness",
+            "pass": true,
+            "reason": "All required fields present",
+            "missing_fields": []
+          }
+        }
+      }
+    },
+    "response": "```json\n{\n  \"sucesso\": true,\n  \"parecer_id\": \"PAR-2025-A2757A17\",\n  \"cnpj\": \"11223344000155\",\n  \"nome_fornecedor\": \"Cloud Provider Inc\",\n  \"api_id\": \"API-005\",\n  \"sigla_servico\": \"SEC-GATEWAY\",\n  \"direcionador\": \"Manter\",\n  \"tipo_requisicao\": \"Renovação\",\n  \"parecer_sugerido\": \"Parecer Favorável\",\n  \"justificativa\": \"Requisição atende todos os critérios estabelecidos. Score de conformidade: 0.90. Recomendado prosseguir com a renovação.\",\n  \"ressalvas\": [\n    \"Fornecedor armazena dados do Banco BV em sua infraestrutura. Verificar conformidade com políticas de segurança e LGPD.\"\n  ],\n  \"score_confianca\": 0.9,\n  \"criterios_aplicados\": [\n    \"Renovação sem histórico de parecer anterior\",\n    \"Múltiplas integrações disponíveis (≥3)\",\n    \"Suporte a tecnologias modernas\",\n    \"Suporta fluxo bidirecional\",\n    \"Serviço em manutenção no CMDB\",\n    \"Armazena dados do BV (requer atenção adicional)\"\n  ],\n  \"insumos_utilizados\": [\n    \"Tipo de requisição: Renovação\",\n    \"Integrações disponíveis: REST, WEBHOOK, MENSAGERIA\",\n    \"Fluxo de dados: BIDIRECIONAL\",\n    \"Direcionador CMDB: Manter\",\n    \"Armazena dados do BV: Sim\"\n  ],\n  \"alertas\": [\n    {\n      \"nivel\": \"ALERTA\",\n      \"mensagem\": \"Contrato vence em mais de 2 anos (899 dias). Revisar necessidade de parecer antecipado.\",\n      \"acao_requerida\": \"Verificar se renovação antecipada é necessária\"\n    }\n  ],\n  \"data_registro\": \"2025-11-29T22:27:29.653686\",\n  \"status\": \"REGISTRADO\",\n  \"proximo_status\": \"AGUARDANDO_REVISAO_ANALISTA\"\n}\n```",
+    "timestamp": "2025-11-29T22:27:41.388288"
+  },
+  {
+    "test_id": "TC-005",
+    "scenario": "Renovação - Vencimento Ausente (BLOQUEIO)",
+    "category": "bloqueio_critico",
+    "status": "FAIL",
+    "execution_time_seconds": 33.56407,
+    "metrics": {
+      "average_score": 0.625,
+      "total_score": 5.0,
+      "metrics_count": 8,
+      "metrics": {
+        "onetrust_validation": {
+          "score": 0.5,
+          "details": {
+            "metric": "onetrust_validation",
+            "pass": false,
+            "reason": "OneTrust mentioned but consultation unclear"
+          }
+        },
+        "cmdb_validation": {
+          "score": 0.0,
+          "details": {
+            "metric": "cmdb_validation",
+            "pass": false,
+            "reason": "CMDB not consulted"
+          }
+        },
+        "parecer_suggestion_accuracy": {
+          "score": 0.5,
+          "details": {
+            "metric": "parecer_suggestion_accuracy",
+            "pass": false,
+            "reason": ""
+          }
+        },
+        "ressalvas_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "ressalvas_detection",
+            "pass": true,
+            "reason": "Correctly no ressalvas",
+            "ressalvas_found": []
+          }
+        },
+        "confidence_score_validity": {
+          "score": 0.0,
+          "details": {
+            "metric": "confidence_score_validity",
+            "pass": false,
+            "reason": "No confidence score provided"
+          }
+        },
+        "alertas_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "alertas_detection",
+            "pass": true,
+            "reason": "No alertas required",
+            "alertas_found": []
+          }
+        },
+        "bloqueio_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "bloqueio_detection",
+            "pass": true,
+            "reason": "Correct bloqueio: VENCIMENTO_AUSENTE"
+          }
+        },
+        "response_completeness": {
+          "score": 1.0,
+          "details": {
+            "metric": "response_completeness",
+            "pass": true,
+            "reason": "All required fields present",
+            "missing_fields": []
+          }
+        }
+      }
+    },
+    "response": "The previous tool outputs indicate a critical blocking condition.\n\n1.  **Request Type**: \"Renovação\"\n2.  **OneTrust Data**: `data_vencimento_contrato` is `null`.\n3.  **Rule**: For \"Renovação\", if `data_vencimento` is NULL, the status must be \"BLOQUEIO\".\n\nPer the instructions (\"TRATAMENTO DE ERROS\" > \"Vencimento ausente (Renovação)\"), I must return the specific blocking JSON and stop processing.\n\n```json\n{\n  \"sucesso\": false,\n  \"status\": \"BLOQUEIO\",\n  \"erro\": \"VENCIMENTO_AUSENTE\",\n  \"mensagem\": \"Data de vencimento não disponível no OneTrust\",\n  \"acao_requerida\": \"Atualizar OneTrust com data de vencimento\"\n}\n```",
+    "timestamp": "2025-11-29T22:28:14.952358"
+  },
+  {
+    "test_id": "TC-006",
+    "scenario": "Nova Contratação - Múltiplas Integrações",
+    "category": "integracao_moderna",
+    "status": "PASS",
+    "execution_time_seconds": 42.200068,
+    "metrics": {
+      "average_score": 1.0,
+      "total_score": 8.0,
+      "metrics_count": 8,
+      "metrics": {
+        "onetrust_validation": {
+          "score": 1.0,
+          "details": {
+            "metric": "onetrust_validation",
+            "pass": true,
+            "reason": "OneTrust properly consulted and documented in insumos"
+          }
+        },
+        "cmdb_validation": {
+          "score": 1.0,
+          "details": {
+            "metric": "cmdb_validation",
+            "pass": true,
+            "reason": "CMDB consulted: sigla=ANALYTICS-ENGINE, direcionador=Evoluir"
+          }
+        },
+        "parecer_suggestion_accuracy": {
+          "score": 1.0,
+          "details": {
+            "metric": "parecer_suggestion_accuracy",
+            "pass": true,
+            "reason": "Correct parecer: Parecer Favorável"
+          }
+        },
+        "ressalvas_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "ressalvas_detection",
+            "pass": true,
+            "reason": "Correctly no ressalvas",
+            "ressalvas_found": []
+          }
+        },
+        "confidence_score_validity": {
+          "score": 1.0,
+          "details": {
+            "metric": "confidence_score_validity",
+            "pass": true,
+            "reason": "Appropriate confidence: 1.0 (range: 0.75-1.0)"
+          }
+        },
+        "alertas_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "alertas_detection",
+            "pass": true,
+            "reason": "No alertas required",
+            "alertas_found": []
+          }
+        },
+        "bloqueio_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "bloqueio_detection",
+            "pass": true,
+            "reason": "Correctly no bloqueio"
+          }
+        },
+        "response_completeness": {
+          "score": 1.0,
+          "details": {
+            "metric": "response_completeness",
+            "pass": true,
+            "reason": "All required fields present",
+            "missing_fields": []
+          }
+        }
+      }
+    },
+    "response": "```json\n{\n  \"sucesso\": true,\n  \"parecer_id\": \"PAR-2025-E26342F5\",\n  \"cnpj\": \"11222333000144\",\n  \"nome_fornecedor\": \"Analytics Platform Inc\",\n  \"api_id\": \"API-003\",\n  \"sigla_servico\": \"ANALYTICS-ENGINE\",\n  \"direcionador\": \"Evoluir\",\n  \"tipo_requisicao\": \"Nova Contratação\",\n  \"parecer_sugerido\": \"Parecer Favorável\",\n  \"justificativa\": \"Solução tecnicamente robusta com suporte a múltiplos protocolos modernos (REST, GraphQL, gRPC, Webhook), alinhada ao direcionador estratégico 'Evoluir'. Oferece alta flexibilidade de integração e não apresenta riscos de armazenamento de dados BV.\",\n  \"ressalvas\": [],\n  \"score_confianca\": 1.0,\n  \"criterios_aplicados\": [\n    \"Integrações Múltiplas\",\n    \"Protocolos Modernos\",\n    \"Fluxo Bidirecional\",\n    \"Direcionador Evoluir\"\n  ],\n  \"insumos_utilizados\": [\n    \"OneTrust\",\n    \"CMDB\"\n  ],\n  \"alertas\": [],\n  \"data_registro\": \"2025-11-29T22:28:43.926265\",\n  \"status\": \"REGISTRADO\",\n  \"proximo_status\": \"AGUARDANDO_REVISAO_ANALISTA\"\n}\n```",
+    "timestamp": "2025-11-29T22:28:57.153418"
+  },
+  {
+    "test_id": "TC-007",
+    "scenario": "Nova Contratação - Fluxo INBOUND",
+    "category": "fluxo_inbound",
+    "status": "PASS",
+    "execution_time_seconds": 53.472303,
+    "metrics": {
+      "average_score": 0.75,
+      "total_score": 6.0,
+      "metrics_count": 8,
+      "metrics": {
+        "onetrust_validation": {
+          "score": 0.0,
+          "details": {
+            "metric": "onetrust_validation",
+            "pass": false,
+            "reason": "OneTrust not consulted or mentioned"
+          }
+        },
+        "cmdb_validation": {
+          "score": 1.0,
+          "details": {
+            "metric": "cmdb_validation",
+            "pass": true,
+            "reason": "CMDB consulted: sigla=CLOUD-STORAGE, direcionador=Manter"
+          }
+        },
+        "parecer_suggestion_accuracy": {
+          "score": 0.6,
+          "details": {
+            "metric": "parecer_suggestion_accuracy",
+            "pass": false,
+            "reason": "Valid but different. Expected: Parecer Favorável com Ressalvas, Got: Parecer Favorável"
+          }
+        },
+        "ressalvas_detection": {
+          "score": 0.4,
+          "details": {
+            "metric": "ressalvas_detection",
+            "pass": false,
+            "reason": "Has 3 ressalvas (≥1)",
+            "ressalvas_found": [
+              "Fornecedor armazena dados do Banco BV em sua infraestrutura. Verificar conformidade com políticas de segurança e LGPD.",
+              "Documentação técnica deve ser atualizada trimestralmente",
+              "SLA deve ser revisado após 6 meses de operação"
+            ]
+          }
+        },
+        "confidence_score_validity": {
+          "score": 1.0,
+          "details": {
+            "metric": "confidence_score_validity",
+            "pass": true,
+            "reason": "Appropriate confidence: 0.9 (range: 0-1.0)"
+          }
+        },
+        "alertas_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "alertas_detection",
+            "pass": true,
+            "reason": "No alertas required",
+            "alertas_found": []
+          }
+        },
+        "bloqueio_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "bloqueio_detection",
+            "pass": true,
+            "reason": "Correctly no bloqueio"
+          }
+        },
+        "response_completeness": {
+          "score": 1.0,
+          "details": {
+            "metric": "response_completeness",
+            "pass": true,
+            "reason": "All required fields present",
+            "missing_fields": []
+          }
+        }
+      }
+    },
+    "response": "```json\n{\n  \"sucesso\": true,\n  \"parecer_id\": \"PAR-2025-A93269D9\",\n  \"cnpj\": \"98765432000101\",\n  \"nome_fornecedor\": \"Cloud Data Services S.A.\",\n  \"api_id\": \"API-002\",\n  \"sigla_servico\": \"CLOUD-STORAGE\",\n  \"direcionador\": \"Manter\",\n  \"tipo_requisicao\": \"Renovação\",\n  \"parecer_sugerido\": \"Parecer Favorável\",\n  \"justificativa\": \"Requisição atende todos os critérios estabelecidos. Score de conformidade: 0.90. Recomendado prosseguir com a renovação.\",\n  \"ressalvas\": [\n    \"Fornecedor armazena dados do Banco BV em sua infraestrutura. Verificar conformidade com políticas de segurança e LGPD.\",\n    \"Documentação técnica deve ser atualizada trimestralmente\",\n    \"SLA deve ser revisado após 6 meses de operação\"\n  ],\n  \"score_confianca\": 0.9,\n  \"criterios_aplicados\": [\n    \"Parecer anterior foi favorável com ressalvas\",\n    \"Integrações disponíveis\",\n    \"Suporte a tecnologias modernas\",\n    \"Suporta fluxo inbound\",\n    \"Serviço em manutenção no CMDB\",\n    \"Armazena dados do BV (requer atenção adicional)\"\n  ],\n  \"insumos_utilizados\": [\n    \"Tipo de requisição: Renovação\",\n    \"Parecer anterior: Parecer Favorável com Ressalvas\",\n    \"Integrações disponíveis: REST, FTP\",\n    \"Fluxo de dados: INBOUND\",\n    \"Direcionador CMDB: Manter\",\n    \"Armazena dados do BV: Sim\"\n  ],\n  \"alertas\": [],\n  \"data_registro\": \"2025-11-29T22:29:36.057006\",\n  \"status\": \"REGISTRADO\",\n  \"proximo_status\": \"AGUARDANDO_REVISAO_ANALISTA\"\n}\n```",
+    "timestamp": "2025-11-29T22:29:50.628728"
+  },
+  {
+    "test_id": "TC-008",
+    "scenario": "Renovação - Direcionador Manter",
+    "category": "manter",
+    "status": "PASS",
+    "execution_time_seconds": 51.607101,
+    "metrics": {
+      "average_score": 0.875,
+      "total_score": 7.0,
+      "metrics_count": 8,
+      "metrics": {
+        "onetrust_validation": {
+          "score": 0.0,
+          "details": {
+            "metric": "onetrust_validation",
+            "pass": false,
+            "reason": "OneTrust not consulted or mentioned"
+          }
+        },
+        "cmdb_validation": {
+          "score": 1.0,
+          "details": {
+            "metric": "cmdb_validation",
+            "pass": true,
+            "reason": "CMDB consulted: sigla=SEC-GATEWAY, direcionador=Manter"
+          }
+        },
+        "parecer_suggestion_accuracy": {
+          "score": 1.0,
+          "details": {
+            "metric": "parecer_suggestion_accuracy",
+            "pass": true,
+            "reason": "Correct parecer: Parecer Favorável"
+          }
+        },
+        "ressalvas_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "ressalvas_detection",
+            "pass": true,
+            "reason": "Correctly no ressalvas",
+            "ressalvas_found": []
+          }
+        },
+        "confidence_score_validity": {
+          "score": 1.0,
+          "details": {
+            "metric": "confidence_score_validity",
+            "pass": true,
+            "reason": "Appropriate confidence: 0.9 (range: 0.75-1.0)"
+          }
+        },
+        "alertas_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "alertas_detection",
+            "pass": true,
+            "reason": "No alertas required",
+            "alertas_found": [
+              "Contrato vence em mais de 2 anos (899 dias).",
+              "Parecer anterior não encontrado para esta renovação. Processado como primeira avaliação neste sistema."
+            ]
+          }
+        },
+        "bloqueio_detection": {
+          "score": 1.0,
+          "details": {
+            "metric": "bloqueio_detection",
+            "pass": true,
+            "reason": "Correctly no bloqueio"
+          }
+        },
+        "response_completeness": {
+          "score": 1.0,
+          "details": {
+            "metric": "response_completeness",
+            "pass": true,
+            "reason": "All required fields present",
+            "missing_fields": []
+          }
+        }
+      }
+    },
+    "response": "```json\n{\n  \"sucesso\": true,\n  \"parecer_id\": \"PAR-2025-3E07BEE2\",\n  \"cnpj\": \"11223344000155\",\n  \"nome_fornecedor\": \"Cloud Provider Inc\",\n  \"api_id\": \"API-005\",\n  \"sigla_servico\": \"SEC-GATEWAY\",\n  \"direcionador\": \"Manter\",\n  \"tipo_requisicao\": \"Renovação\",\n  \"parecer_sugerido\": \"Parecer Favorável\",\n  \"justificativa\": \"Requisição atende todos os critérios estabelecidos. Score de conformidade: 0.90. Recomendado prosseguir com a renovação.\",\n  \"ressalvas\": [],\n  \"score_confianca\": 0.9,\n  \"criterios_aplicados\": [\n    \"Renovação sem histórico de parecer anterior\",\n    \"Integrações disponíveis\",\n    \"Suporte a tecnologias modernas\",\n    \"Suporta fluxo bidirecional\",\n    \"Serviço em manutenção no CMDB\"\n  ],\n  \"insumos_utilizados\": [\n    \"Tipo de requisição: Renovação\",\n    \"Integrações disponíveis: REST, SOAP\",\n    \"Fluxo de dados: BIDIRECIONAL\",\n    \"Direcionador CMDB: Manter\"\n  ],\n  \"alertas\": [\n    {\n      \"nivel\": \"ALERTA\",\n      \"mensagem\": \"Contrato vence em mais de 2 anos (899 dias).\",\n      \"acao_requerida\": \"Verificar se renovação antecipada é necessária\"\n    },\n    {\n      \"nivel\": \"INFO\",\n      \"mensagem\": \"Parecer anterior não encontrado para esta renovação. Processado como primeira avaliação neste sistema.\",\n      \"acao_requerida\": null\n    }\n  ],\n  \"data_registro\": \"2025-11-29T22:30:30.326729\",\n  \"status\": \"REGISTRADO\",\n  \"proximo_status\": \"AGUARDANDO_REVISAO_ANALISTA\"\n}\n```",
+    "timestamp": "2025-11-29T22:30:42.236334"
+  }
+]

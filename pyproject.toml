@@ -1,0 +1,38 @@
+[project]
+name = "architecture-domain-ans"
+version = "1.0.0"
+description = "AI Agent for Architecture Domain Opinion Management - Banco BV ANS"
+authors = [
+    {name = "Architecture Team", email = "architecture@bancobv.com.br"}
+]
+license = {text = "Apache License 2.0"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "google-adk>=1.17.0,<2.0.0",
+    "google-cloud-aiplatform[adk,agent-engines]>=1.100.0,<2.0.0",
+    "google-cloud-storage>=3.0.0,<4.0.0",
+    "pydantic>=2.10.0,<3.0.0",
+    "python-dotenv>=1.1.1,<2.0.0",
+    "absl-py>=2.2.1,<3.0.0",
+]
+
+[tool.poetry]
+
+[tool.poetry.group.dev.dependencies]
+google-adk = ">=1.19.0,<2.0.0"
+pytest = "^8.3.5"
+pytest-asyncio = "^0.26.0"
+black = "^25.1.0"
+
+[tool.poetry.group.deployment]
+optional = true
+
+[tool.poetry.group.deployment.dependencies]
+absl-py = "^2.2.2"
+google-cloud-aiplatform = { version = ">=1.100.0", extras = ["adk","agent-engines"] }
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+

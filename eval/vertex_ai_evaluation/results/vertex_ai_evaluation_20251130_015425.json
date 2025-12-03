@@ -1,0 +1,5 @@
+{
+  "status": "FAILED",
+  "error": "evaluate_all_metrics() missing 1 required positional argument: 'actual'",
+  "timestamp": "2025-11-30T01:54:25.874926"
+}

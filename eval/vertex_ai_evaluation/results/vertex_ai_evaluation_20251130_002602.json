@@ -1,0 +1,27 @@
+{
+  "evaluation_id": "projects/gft-bu-gcp/locations/us-central1/evaluations/eval-20251130-002602",
+  "display_name": "architecture-domain-ans-eval-20251130_002554",
+  "agent_id": "architecture-domain-ans-v1.0",
+  "dataset_uri": "gs://gft-bu-gcp-eval-staging/datasets/eval_dataset_20251130_002601.jsonl",
+  "dashboard_url": "https://console.cloud.google.com/vertex-ai/generative/evaluation/eval-20251130-002602?project=gft-bu-gcp",
+  "status": "MOCK_COMPLETED",
+  "mock_mode": true,
+  "metrics_requested": [
+    "tool_use_quality",
+    "response_quality",
+    "safety",
+    "groundedness",
+    "instruction_following"
+  ],
+  "custom_metrics_count": 5,
+  "metrics_summary": {
+    "tool_use_quality": 0.85,
+    "response_quality": 0.88,
+    "safety": 0.95,
+    "groundedness": 0.87,
+    "instruction_following": 0.9
+  },
+  "bigquery_table": "gft-bu-gcp.architecture_domain_ans_eval.evaluation_results",
+  "timestamp": "2025-11-30T00:26:02.061076",
+  "note": "This is a MOCK evaluation. Real Vertex AI Evaluation requires additional API setup."
+}

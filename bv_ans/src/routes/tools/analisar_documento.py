@@ -3,7 +3,7 @@ from genai_framework.decorators import file_input_route
 from genai_framework.models import FileInput
 from google.genai import Client
 from google.genai import types
- 
+
 @file_input_route("analisar_documento_parecer")
 def analisar_documento_parecer(file: FileInput):
     """
@@ -12,8 +12,8 @@ def analisar_documento_parecer(file: FileInput):
     """
     client = Client(
         vertexai=True,
-        project=os.getenv('PROJECT_ID'),
-        location=os.getenv('LOCATION')
+        project=os.getenv('GOOGLE_CLOUD_PROJECT', 'gft-bu-gcp'),
+        location=os.getenv('GOOGLE_CLOUD_LOCATION', 'us-central1')
     )
    
     # Validar extensões aceitas

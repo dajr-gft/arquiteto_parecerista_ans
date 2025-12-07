@@ -4,7 +4,7 @@ from genai_framework.decorators import file_input_route
 from genai_framework.models import FileInput
 from google.genai import Client
 from google.genai import types
- 
+
 try:
     import pandas as pd
 except ImportError:
@@ -65,8 +65,8 @@ def analisar_planilha_parecer(file: FileInput):
     # Inicializar cliente Vertex AI
     client = Client(
         vertexai=True,
-        project=os.getenv('PROJECT_ID'),
-        location=os.getenv('LOCATION')
+        project=os.getenv('GOOGLE_CLOUD_PROJECT', 'gft-bu-gcp'),
+        location=os.getenv('GOOGLE_CLOUD_LOCATION', 'us-central1')
     )
    
     # Prompt especializado para análise de planilhas

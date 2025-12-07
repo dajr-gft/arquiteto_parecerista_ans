@@ -4,9 +4,10 @@ Rota para consultar status e informações do sistema de pareceres.
  
 import json
 import os
+from datetime import datetime
 from genai_framework.decorators import get_route
- 
- 
+
+
 @get_route('status')
 def get_status():
     """
@@ -19,11 +20,11 @@ def get_status():
         'status': 'online',
         'service': 'Architecture Domain ANS - Parecerista',
         'version': '1.0.0',
-        'project_id': os.getenv('PROJECT_ID', 'not-configured'),
-        'location': os.getenv('LOCATION', 'not-configured')
+        'project_id': os.getenv('GOOGLE_CLOUD_PROJECT', 'not-configured'),
+        'location': os.getenv('GOOGLE_CLOUD_LOCATION', 'not-configured')
     })
  
- 
+
 @get_route('health')
 def get_health():
     """
@@ -34,6 +35,6 @@ def get_health():
     """
     return json.dumps({
         'status': 'healthy',
-        'timestamp': os.popen('date').read().strip()
+        'timestamp': datetime.now().isoformat()
     })
  

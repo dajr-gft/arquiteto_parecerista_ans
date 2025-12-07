@@ -1,43 +1,51 @@
-import base64
-from typing import List, Optional
-from fastapi import File, UploadFile, Form
+import os
 import uuid
+from io import BytesIO
+from pathlib import Path
+from typing import List, Optional
+
+import pandas as pd
+from fastapi import File, Form, UploadFile
 from genai_framework.decorators import post_route
 from google.adk.agents import LlmAgent
 from google.adk.memory import InMemoryMemoryService
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
-from .prompt import ANS_PROMPT
 from google.genai import types
-import os
-import pandas as pd
-from io import BytesIO
 
-os.environ["GOOGLE_GENAI_USE_VERTEXAI"] = "True"  
- 
-PROJECT_ID = os.getenv('GOOGLE_CLOUD_PROJECT', 'gft-bu-gcp')
-LOCATION = 'us-central1'
- 
-os.environ["GOOGLE_CLOUD_PROJECT"] = PROJECT_ID    
-os.environ["GOOGLE_CLOUD_LOCATION"] = LOCATION  
+from .prompt import ANS_PROMPT
+
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+    env_path = Path(__file__).parent.parent.parent / '.env'
+    load_dotenv(dotenv_path=env_path)
+except ImportError:
+    # dotenv not installed, will use system environment variables
+    pass
+
+# Setup Google Cloud environment variables (only if not already set)
+os.environ.setdefault("GOOGLE_GENAI_USE_VERTEXAI", os.getenv("GOOGLE_GENAI_USE_VERTEXAI", "True"))
+os.environ.setdefault("GOOGLE_CLOUD_PROJECT", os.getenv("GOOGLE_CLOUD_PROJECT", "gft-bu-gcp"))
+os.environ.setdefault("GOOGLE_CLOUD_LOCATION", os.getenv("GOOGLE_CLOUD_LOCATION", "us-central1"))
 
 # Create and expose the root agent for ADK Web Server
 root_agent = LlmAgent(
-    name="ans_expert_agent",
-    model="gemini-2.5-pro",
-    description="Business and Solutions Architecture Agent - Expert in ANS domain for Banco BV",
+    name=os.getenv("AGENT_NAME", "ans_expert_agent"),
+    model=os.getenv("AGENT_MODEL", "gemini-2.5-pro"),
+    description=os.getenv("AGENT_DESCRIPTION", "Business and Solutions Architecture Agent - Expert in ANS domain for Banco BV"),
     instruction=ANS_PROMPT
 )
 
 async def agent(text: str = None, files: List[UploadFile] = None):
     """
-    Funo principal do agente que processa texto e arquivos
+    Função principal do agente que processa texto e arquivos
     """
     # Use the module-level root_agent instead of creating a new one
     session_service = InMemorySessionService()
     memory_service = InMemoryMemoryService()
  
-    APP_NAME = "ans_expert_agent"
+    APP_NAME = os.getenv("AGENT_NAME", "ans_expert_agent")
     SESSION_ID = str(uuid.uuid4())
     USER_ID = str(uuid.uuid4())
  
@@ -66,8 +74,7 @@ async def agent(text: str = None, files: List[UploadFile] = None):
             content = await file.read()
             filename = file.filename
             mime_type = file.content_type
-            # Converter para base64
-            base64_data = base64.b64encode(content).decode('utf-8')
+
             # Determinar o tipo e enviar nativamente
             if mime_type and mime_type.startswith('image/'):
                 # Imagens: PNG, JPEG, WEBP, GIF
@@ -142,7 +149,7 @@ async def ans_review(
 
         # Nenhum conteúdo fornecido
         if (texto is None or texto.strip() == "") and not file_list:
-            return {"error": str(e)}
+            return {"error": "Nenhum conteúdo fornecido (texto ou arquivos)"}
 
         # Três caminhos: ambos, só arquivos, só texto
         if file_list and (texto is not None and texto.strip() != ""):

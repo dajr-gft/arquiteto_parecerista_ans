@@ -13,8 +13,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 class TestAnalisarParecer:
     """Testes para a rota analisar_parecer"""
    
-    @patch('routes.analisar_parecer.Runner')
-    @patch('routes.analisar_parecer.LlmAgent')
+    @patch('routes.tools.analisar_parecer.Runner')
+    @patch('routes.tools.analisar_parecer.LlmAgent')
     def test_analise_com_sucesso(self, mock_agent, mock_runner):
         """Testa análise de parecer com sucesso"""
         # Mock do runner e agente
@@ -23,8 +23,8 @@ class TestAnalisarParecer:
         mock_runner_instance.run.return_value = "Parecer favorável"
        
         # Importa a função da rota
-        from routes.analisar_parecer import analisar_parecer_completo
-       
+        from routes.tools.analisar_parecer import analisar_parecer_completo
+
         # Executa
         result, status = analisar_parecer_completo({
             "fornecedor": "Tech Solutions",
@@ -39,8 +39,8 @@ class TestAnalisarParecer:
    
     def test_analise_sem_dados_obrigatorios(self):
         """Testa análise sem dados obrigatórios"""
-        from routes.analisar_parecer import analisar_parecer_completo
-       
+        from routes.tools.analisar_parecer import analisar_parecer_completo
+
         result, status = analisar_parecer_completo({})
        
         assert status == 400
@@ -50,7 +50,7 @@ class TestAnalisarParecer:
 class TestConsultarParecer:
     """Testes para a rota consultar_parecer_simples"""
    
-    @patch('routes.consultar_parecer_simples.GenerativeModel')
+    @patch('routes.tools.consultar_parecer_simples.GenerativeModel')
     def test_consulta_simples_sucesso(self, mock_model):
         """Testa consulta simples com sucesso"""
         # Mock do modelo
@@ -58,8 +58,8 @@ class TestConsultarParecer:
         mock_response.text = "Análise realizada com sucesso"
         mock_model.return_value.generate_content.return_value = mock_response
        
-        from routes.consultar_parecer_simples import consultar_parecer_rapido
-       
+        from routes.tools.consultar_parecer_simples import consultar_parecer_rapido
+
         result, status = consultar_parecer_rapido({
             "fornecedor": "Tech Corp",
             "servico": "Cloud Storage"
@@ -72,15 +72,15 @@ class TestConsultarParecer:
 class TestAnalisarDocumento:
     """Testes para a rota analisar_documento"""
    
-    @patch('routes.analisar_documento.GenerativeModel')
+    @patch('routes.tools.analisar_documento.GenerativeModel')
     def test_upload_documento_sucesso(self, mock_model):
         """Testa upload e análise de documento com sucesso"""
         mock_response = Mock()
         mock_response.text = '{"parecer": "favoravel", "riscos": []}'
         mock_model.return_value.generate_content.return_value = mock_response
        
-        from routes.analisar_documento import analisar_documento_parecer
-       
+        from routes.tools.analisar_documento import analisar_documento_parecer
+
         # Simula arquivo de texto
         mock_file = Mock()
         mock_file.filename = "doc.txt"
@@ -93,8 +93,8 @@ class TestAnalisarDocumento:
    
     def test_upload_tipo_arquivo_invalido(self):
         """Testa upload de tipo de arquivo não permitido"""
-        from routes.analisar_documento import analisar_documento_parecer
-       
+        from routes.tools.analisar_documento import analisar_documento_parecer
+
         mock_file = Mock()
         mock_file.filename = "malware.exe"
        
@@ -109,8 +109,8 @@ class TestConsultarStatus:
    
     def test_health_check(self):
         """Testa health check da aplicação"""
-        from routes.consultar_status import health_check
-       
+        from routes.tools.consultar_status import health_check
+
         result, status = health_check()
        
         assert status == 200

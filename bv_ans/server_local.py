@@ -10,17 +10,20 @@ import sys
 import os
 import importlib
 import uvicorn
-# from src.routes.ans_agent import agent
- 
+
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 # Adicionar src ao path
 sys.path.insert(0, 'src')
 sys.path.insert(0, 'genai_frameork')
- 
+
 from src.routes.agent import agent
-# Configurar variáveis de ambiente
-os.environ.setdefault('PROJECT_ID', 'seu-projeto-gcp')
-os.environ.setdefault('LOCATION', 'us-central1')
- 
+
 def import_fresh(module_path):
     """Importa um módulo forçando o reload"""
     if module_path in sys.modules:
@@ -38,7 +41,7 @@ app = FastAPI(
 async def route_status():
     """Health check da aplicação"""
     try:
-        consultar_status = import_fresh('routes.consultar_status')
+        consultar_status = import_fresh('routes.tools.consultar_status')
         result, code = consultar_status.status()
         return JSONResponse(
             content=result if isinstance(result, dict) else eval(result),
@@ -51,7 +54,7 @@ async def route_status():
 async def route_health():
     """Health check detalhado"""
     try:
-        consultar_status = import_fresh('routes.consultar_status')
+        consultar_status = import_fresh('routes.tools.consultar_status')
         result, code = consultar_status.health()
         return JSONResponse(
             content=result if isinstance(result, dict) else eval(result),
@@ -69,7 +72,7 @@ async def route_parecer_simples(request: Request):
         if not data:
             raise HTTPException(status_code=400, detail={"error": "JSON body required"})
        
-        consultar_parecer_simples_module = import_fresh('routes.consultar_parecer_simples')
+        consultar_parecer_simples_module = import_fresh('routes.tools.consultar_parecer_simples')
         result, code = consultar_parecer_simples_module.consultar_parecer_simples(data)
         return JSONResponse(
             content=result if isinstance(result, dict) else eval(result),
@@ -88,7 +91,7 @@ async def route_analisar_parecer(request: Request):
         if not data:
             raise HTTPException(status_code=400, detail={"error": "JSON body required"})
        
-        analisar_parecer_module = import_fresh('routes.analisar_parecer')
+        analisar_parecer_module = import_fresh('routes.tools.analisar_parecer')
         result, code = analisar_parecer_module.analisar_parecer(data)
         return JSONResponse(
             content=result if isinstance(result, dict) else eval(result),
@@ -107,7 +110,7 @@ async def route_analisar_documento(file: UploadFile = File(...)):
         if not file.filename:
             raise HTTPException(status_code=400, detail={"error": "Empty filename"})
        
-        analisar_documento_module = import_fresh('routes.analisar_documento')
+        analisar_documento_module = import_fresh('routes.tools.analisar_documento')
         file_content = await file.read()
         result, code = analisar_documento_module.analisar_documento_parecer(file_content, file.filename)
         return JSONResponse(
@@ -126,7 +129,7 @@ async def route_extrair_contrato(file: UploadFile = File(...)):
         if not file.filename:
             raise HTTPException(status_code=400, detail={"error": "Empty filename"})
        
-        extrair_dados_module = import_fresh('routes.extrair_dados_contrato')
+        extrair_dados_module = import_fresh('routes.tools.extrair_dados_contrato')
         file_content = await file.read()
         result, code = extrair_dados_module.extrair_dados_contrato(file_content, file.filename)
         return JSONResponse(
@@ -150,7 +153,7 @@ async def route_analisar_planilha(file: UploadFile = File(...)):
         file_content = await file.read()
         file_input = SimpleNamespace(content=file_content, filename=file.filename)
        
-        analisar_planilha_module = import_fresh('routes.analisar_planilha')
+        analisar_planilha_module = import_fresh('routes.tools.analisar_planilha')
         result = analisar_planilha_module.analisar_planilha_parecer(file_input)
        
         # Se retornou tupla (result, code)
@@ -196,9 +199,8 @@ if __name__ == '__main__':
     print("\n📚 Documentação interativa:")
     print("   http://localhost:8080/docs (Swagger UI)")
     print("   http://localhost:8080/redoc (ReDoc)")
-    print("\n⚠️  Configure as variáveis de ambiente:")
-    print("   export PROJECT_ID='seu-projeto-gcp'")
-    print("   export LOCATION='us-central1'")
+    print("\n⚠️  Configuração:")
+    print("   Configure as variáveis no arquivo .env (copie de .env.example)")
     print("\n" + "="*60 + "\n")
    
     uvicorn.run(app, host="0.0.0.0", port=8080, log_level="info")

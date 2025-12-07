@@ -1,0 +1,29 @@
+serviceAccountName: ksa-sgen-base-43556 # valor obrigatório
+dnsBase: sample-genaigke # valor obrigatório
+configmap:
+  variables:
+    PROJECT_ID: # valor obrigatório
+      des: bv-sgen-des
+      uat: bv-sgen-uat
+      prd: bv-sgen-prd
+    LOCATION: # valor obrigatório
+      des: us-central1
+      uat: us-central1
+      prd: us-central1
+    LOG_LEVEL: # valor opcional, padrões: DEBUG, INFO, INFO
+      des: DEBUG
+      uat: INFO
+      prd: INFO
+    ##VARIAVEIS EXTRAS NECESSÁRIAS CASO USE O ADK
+    GOOGLE_GENAI_USE_VERTEXAI:
+      des: "TRUE"
+      uat: "TRUE"
+      prd: "TRUE"
+    GOOGLE_CLOUD_PROJECT:
+      des: bv-sgen-des
+      uat: bv-sgen-uat
+      prd: bv-sgen-prd
+    GOOGLE_CLOUD_LOCATION:
+      des: us-central1
+      uat: us-central1
+      prd: us-central1

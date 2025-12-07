@@ -20,8 +20,11 @@ import os
 from dotenv import load_dotenv
 from google.adk.agents import Agent
 from google.adk.tools import FunctionTool
-
-from . import prompts
+from google.genai.types import GenerateContentConfig, ThinkingConfig
+from google.genai import types
+from google.adk.planners import BuiltInPlanner
+#import google.generativeai as genai
+from . import prompts_optimized as prompts
 from .tools import (
     capturar_vencimento,
     carregar_insumos,
@@ -38,7 +41,7 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
-
+#assert root_agent.model == 'gemini-3-pro-preview'
 load_dotenv()
 
 # Force Vertex AI usage
@@ -52,8 +55,22 @@ LOCATION = os.getenv('GOOGLE_CLOUD_LOCATION', 'global')
 os.environ.setdefault("GOOGLE_CLOUD_PROJECT", PROJECT_ID)
 os.environ.setdefault("GOOGLE_CLOUD_LOCATION", LOCATION)
 
+# Configurar o modelo com thinking
+model_config = GenerateContentConfig(
+    thinking_config=ThinkingConfig(
+        thinking_level="HIGH",
+        include_thoughts=True
+    ),
+    temperature=1.0
+)
+
 root_agent = Agent(
     model='gemini-3-pro-preview',
+    #model_config=model_config,
+    #generate_content_config=types.GenerateContentConfig(temperature=0),
+    planner=BuiltInPlanner(
+            thinking_config=types.ThinkingConfig(thinking_level="HIGH")
+    ),
     name='architecture_domain_ans',
     description=(
         'Assistente inteligente para análise e emissão de pareceres de arquitetura. '
@@ -72,8 +89,8 @@ root_agent = Agent(
         FunctionTool(sugerir_parecer),
         FunctionTool(registrar_parecer),
     ],
+
 )
 
 logger.info(f"Architecture Domain ANS Agent initialized (Project: {PROJECT_ID}, Location: {LOCATION})")
 logger.info("Note: Agent will use gcloud auth credentials. Run 'gcloud auth application-default login' if needed.")
-

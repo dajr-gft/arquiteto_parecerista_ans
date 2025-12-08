@@ -86,13 +86,13 @@ pytest bv_ans/testes/unit_tests/ -v
 ### Executar com Relatório de Cobertura
 
 ```powershell
-pytest bv_ans/testes/unit_tests/ -v --cov=architecture_domain_ans --cov-report=term-missing
+pytest unit_tests/ -v --cov=../src --cov-report=term-missing
 ```
 
 ### Executar com Relatório HTML
 
 ```powershell
-pytest bv_ans/testes/unit_tests/ -v --cov=architecture_domain_ans --cov-report=html
+pytest unit_tests/ -v --cov=../src --cov-report=html
 ```
 
 O relatório HTML será gerado em `htmlcov/index.html`.

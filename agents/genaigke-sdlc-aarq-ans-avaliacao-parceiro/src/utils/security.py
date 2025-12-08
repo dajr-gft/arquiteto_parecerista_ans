@@ -88,6 +88,9 @@ def validate_file_security(file: UploadFile, content: bytes) -> None:
                         status_code=400,
                         detail="Conteúdo suspeito detectado no arquivo"
                     )
+        except HTTPException:
+            # Re-raise HTTPException para não ser capturada
+            raise
         except Exception:
             pass  # Se não conseguir decodificar, não é texto e não precisa validar
 

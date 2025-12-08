@@ -15,9 +15,112 @@
 """Pytest configuration and shared fixtures for unit tests."""
 
 import os
+import sys
 import pytest
+from pathlib import Path
 from datetime import datetime, timedelta
 from typing import Dict, List
+
+# ============================================================================
+# SETUP SYS.PATH FOR IMPORTS
+# ============================================================================
+
+# Add src directory to Python path so tests can import modules
+src_path = Path(__file__).parent.parent.parent / "src"
+if str(src_path) not in sys.path:
+    sys.path.insert(0, str(src_path))
+
+print(f"✅ Added to sys.path: {src_path}")
+
+# Try to import and make modules available globally
+try:
+    from routes import agent as _agent_module
+    from routes import prompt as _prompt_module
+    from routes.tools import analisar_documento as _analisar_documento
+    from routes.tools import analisar_parecer as _analisar_parecer
+    from routes.tools import analisar_planilha as _analisar_planilha
+    from routes.tools import consultar_parecer_simples as _consultar_parecer_simples
+    from routes.tools import consultar_status as _consultar_status
+    from routes.tools import extrair_dados_contrato as _extrair_dados_contrato
+    from utils import security as _security
+    from utils import audit as _audit
+    from utils import health as _health
+    print("✅ Successfully imported all modules for testing")
+    MODULES_AVAILABLE = True
+except ImportError as e:
+    print(f"⚠️ Import warning: {e}")
+    _agent_module = None
+    _prompt_module = None
+    _analisar_documento = None
+    _analisar_parecer = None
+    _analisar_planilha = None
+    _consultar_parecer_simples = None
+    _consultar_status = None
+    _extrair_dados_contrato = None
+    _security = None
+    _audit = None
+    _health = None
+    MODULES_AVAILABLE = False
+
+
+# ============================================================================
+# MODULE FIXTURES - Expose imported modules to tests
+# ============================================================================
+
+@pytest.fixture(scope="session")
+def agent_module():
+    """Provide agent module to tests."""
+    return _agent_module
+
+@pytest.fixture(scope="session")
+def prompt_module():
+    """Provide prompt module to tests."""
+    return _prompt_module
+
+@pytest.fixture(scope="session")
+def analisar_documento_module():
+    """Provide analisar_documento module to tests."""
+    return _analisar_documento
+
+@pytest.fixture(scope="session")
+def analisar_parecer_module():
+    """Provide analisar_parecer module to tests."""
+    return _analisar_parecer
+
+@pytest.fixture(scope="session")
+def analisar_planilha_module():
+    """Provide analisar_planilha module to tests."""
+    return _analisar_planilha
+
+@pytest.fixture(scope="session")
+def consultar_parecer_simples_module():
+    """Provide consultar_parecer_simples module to tests."""
+    return _consultar_parecer_simples
+
+@pytest.fixture(scope="session")
+def consultar_status_module():
+    """Provide consultar_status module to tests."""
+    return _consultar_status
+
+@pytest.fixture(scope="session")
+def extrair_dados_contrato_module():
+    """Provide extrair_dados_contrato module to tests."""
+    return _extrair_dados_contrato
+
+@pytest.fixture(scope="session")
+def security_module():
+    """Provide security module to tests."""
+    return _security
+
+@pytest.fixture(scope="session")
+def audit_module():
+    """Provide audit module to tests."""
+    return _audit
+
+@pytest.fixture(scope="session")
+def health_module():
+    """Provide health module to tests."""
+    return _health
 
 
 # ============================================================================

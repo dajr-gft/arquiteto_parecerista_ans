@@ -1,0 +1,169 @@
+# ENTENDIMENTO DA DEMANDA
+
+## 1. OBJETIVOS ESTRATÉGICOS
+
+### 1.1 Objetivo Geral
+Implementar uma solução de análise automatizada de propostas técnicas e comerciais utilizando inteligência artificial para otimizar o processo de avaliação de fornecedores e reduzir o tempo de análise de documentação.
+
+### 1.2 Objetivos Específicos
+- Reduzir em 70% o tempo de análise de propostas comerciais
+- Padronizar critérios de avaliação técnica
+- Aumentar a precisão na identificação de não conformidades
+- Criar histórico estruturado de avaliações para análise futura
+- Melhorar a rastreabilidade e auditoria do processo decisório
+
+## 2. REQUISITOS DE NEGÓCIO
+
+### 2.1 Requisitos Funcionais
+- RF01: Sistema deve processar documentos em formato PDF, DOCX e TXT
+- RF02: Análise automática de propostas técnicas considerando requisitos pré-estabelecidos
+- RF03: Análise automática de propostas comerciais avaliando competitividade de preços
+- RF04: Geração de parecer técnico estruturado com justificativas
+- RF05: Identificação automática de cláusulas contratuais críticas
+- RF06: Comparação entre múltiplas propostas de fornecedores
+- RF07: Alertas para não conformidades regulatórias (ANS)
+- RF08: Dashboard com métricas de avaliação
+
+### 2.2 Requisitos Não Funcionais
+- RNF01: Tempo de resposta inferior a 30 segundos para análise de documento padrão
+- RNF02: Disponibilidade de 99.5%
+- RNF03: Compatibilidade com navegadores modernos (Chrome, Edge, Firefox)
+- RNF04: Conformidade com LGPD
+- RNF05: Logs auditáveis de todas as análises
+- RNF06: Escalabilidade para processar até 100 documentos simultâneos
+
+## 3. ÁREAS IMPACTADAS
+
+### 3.1 Áreas Diretas
+- **Compras/Procurement**: Principal usuário do sistema
+- **Jurídico**: Validação de cláusulas contratuais
+- **TI/Arquitetura**: Avaliação técnica de soluções
+- **Financeiro**: Análise de propostas comerciais
+
+### 3.2 Áreas Indiretas
+- **Compliance**: Auditoria e conformidade
+- **Controladoria**: Relatórios gerenciais
+- **Áreas Solicitantes**: Recebimento de pareceres mais rápidos
+
+## 4. INTEGRAÇÕES NECESSÁRIAS
+
+### 4.1 Sistemas Internos
+- **Sistema ERP**: Integração para buscar histórico de fornecedores
+- **CMDB (Configuration Management Database)**: Consulta de ativos e configurações
+- **Sistema de Gestão de Contratos**: Registro de pareceres e decisões
+- **OneTrust**: Validação de conformidade com LGPD/privacidade
+- **Active Directory/SSO**: Autenticação de usuários
+
+### 4.2 APIs Externas
+- **Google Cloud Vertex AI**: Processamento de linguagem natural
+- **Google Cloud Storage**: Armazenamento de documentos
+- **Serviços de OCR**: Extração de texto de documentos escaneados
+
+### 4.3 Dados Necessários
+- Base de conhecimento ANS (Agência Nacional de Saúde Suplementar)
+- Histórico de avaliações anteriores
+- Tabela de preços de referência de mercado
+- Matriz de criticidade de requisitos técnicos
+
+## 5. PRAZOS
+
+### 5.1 Cronograma Macro
+- **Fase 1 - Análise e Design**: 4 semanas
+  - Levantamento detalhado de requisitos
+  - Definição de arquitetura
+  - Prototipação de prompts e agentes
+
+- **Fase 2 - Desenvolvimento MVP**: 8 semanas
+  - Desenvolvimento do agente principal
+  - Implementação de ferramentas básicas
+  - Integração com Vertex AI
+
+- **Fase 3 - Testes e Homologação**: 4 semanas
+  - Testes funcionais
+  - Testes de integração
+  - Homologação com usuários
+
+- **Fase 4 - Implantação**: 2 semanas
+  - Deploy em produção
+  - Treinamento de usuários
+  - Suporte pós-implantação
+
+### 5.2 Milestones Críticos
+- **M1**: Aprovação de arquitetura - Semana 4
+- **M2**: MVP funcional - Semana 12
+- **M3**: Homologação concluída - Semana 16
+- **M4**: Go-live produção - Semana 18
+
+## 6. STAKEHOLDERS
+
+### 6.1 Principais Envolvidos
+- **Sponsor**: Diretor de Procurement
+- **Product Owner**: Gerente de Compras
+- **Tech Lead**: Arquiteto de Soluções IA
+- **Usuários Chave**: Analistas de Compras (5 pessoas)
+
+### 6.2 Comitê de Aprovação
+- Diretor de Procurement
+- Gerente de TI
+- Gerente Jurídico
+- Compliance Officer
+
+## 7. RESTRIÇÕES E PREMISSAS
+
+### 7.1 Restrições
+- Orçamento limitado a R$ 500.000,00
+- Equipe de desenvolvimento: máximo 4 pessoas
+- Infraestrutura deve ser cloud (GCP)
+- Não pode haver lock-in de fornecedor único
+
+### 7.2 Premissas
+- Documentos fornecidos estarão em português
+- Fornecedores enviarão propostas em formatos digitais
+- Usuários terão acesso à internet
+- Haverá disponibilidade de especialistas de domínio para validação
+
+## 8. CRITÉRIOS DE SUCESSO
+
+### 8.1 KPIs
+- Redução de 70% no tempo médio de análise
+- 90% de precisão na identificação de não conformidades
+- 95% de satisfação dos usuários
+- ROI positivo em 12 meses
+- Zero incidentes de segurança/privacidade
+
+### 8.2 Métricas de Qualidade
+- Acurácia do modelo ≥ 85%
+- Taxa de falsos positivos ≤ 10%
+- Cobertura de casos de uso ≥ 95%
+
+## 9. RISCOS IDENTIFICADOS
+
+### 9.1 Riscos Técnicos
+- **R01**: Baixa precisão do modelo de IA - Probabilidade: Média, Impacto: Alto
+- **R02**: Problemas de integração com sistemas legados - Probabilidade: Alta, Impacto: Médio
+- **R03**: Performance inadequada em picos de demanda - Probabilidade: Baixa, Impacto: Alto
+
+### 9.2 Riscos de Negócio
+- **R04**: Resistência dos usuários à adoção - Probabilidade: Média, Impacto: Alto
+- **R05**: Mudanças regulatórias ANS durante desenvolvimento - Probabilidade: Baixa, Impacto: Médio
+
+## 10. INFORMAÇÕES ADICIONAIS
+
+### 10.1 Volume Esperado
+- 150 propostas/mês em média
+- Picos de até 300 propostas/mês
+- Tamanho médio dos documentos: 15-50 páginas
+- Retenção de dados: 5 anos
+
+### 10.2 Requisitos de Segurança
+- Dados sensíveis devem ser criptografados em repouso e em trânsito
+- Controle de acesso baseado em perfis (RBAC)
+- Logs de auditoria completos
+- Conformidade com ISO 27001
+
+### 10.3 Suporte e Manutenção
+- SLA de 8x5 (horário comercial)
+- Tempo de resposta para incidentes críticos: 2 horas
+- Atualizações mensais de modelos e regras
+- Documentação técnica e de usuário completa
+

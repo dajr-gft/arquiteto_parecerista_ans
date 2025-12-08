@@ -1,0 +1,78 @@
+{
+  "timestamp": "20251207_024620",
+  "total_tests": 7,
+  "passed": 0,
+  "failed": 7,
+  "results": [
+    {
+      "test_id": "TC-DOC-001",
+      "scenario": "Análise de Especificação Técnica Completa",
+      "category": "document_analysis",
+      "subcategory": "technical_specification",
+      "execution_time": 4.774958,
+      "error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'Publisher Model `projects/gft-bu-gcp/locations/us-central1/publishers/google/models/gemini-3-pro-preview` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions', 'status': 'NOT_FOUND'}}",
+      "passed": false,
+      "timestamp": "2025-12-07T02:46:03.747973"
+    },
+    {
+      "test_id": "TC-DOC-002",
+      "scenario": "Análise de Proposta Comercial de Fornecedor",
+      "category": "document_analysis",
+      "subcategory": "vendor_proposal",
+      "execution_time": 2.800942,
+      "error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'Publisher Model `projects/gft-bu-gcp/locations/us-central1/publishers/google/models/gemini-3-pro-preview` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions', 'status': 'NOT_FOUND'}}",
+      "passed": false,
+      "timestamp": "2025-12-07T02:46:06.550908"
+    },
+    {
+      "test_id": "TC-SHEET-001",
+      "scenario": "Análise de Matriz de Requisitos (Excel)",
+      "category": "spreadsheet_analysis",
+      "subcategory": "requirements_matrix",
+      "execution_time": 2.813518,
+      "error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'Publisher Model `projects/gft-bu-gcp/locations/us-central1/publishers/google/models/gemini-3-pro-preview` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions', 'status': 'NOT_FOUND'}}",
+      "passed": false,
+      "timestamp": "2025-12-07T02:46:09.365432"
+    },
+    {
+      "test_id": "TC-CONTRACT-001",
+      "scenario": "Extração de Dados de Contrato",
+      "category": "contract_extraction",
+      "subcategory": "full_contract",
+      "execution_time": 2.70592,
+      "error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'Publisher Model `projects/gft-bu-gcp/locations/us-central1/publishers/google/models/gemini-3-pro-preview` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions', 'status': 'NOT_FOUND'}}",
+      "passed": false,
+      "timestamp": "2025-12-07T02:46:12.073691"
+    },
+    {
+      "test_id": "TC-OPINION-001",
+      "scenario": "Parecer Simples Rápido",
+      "category": "simple_opinion",
+      "subcategory": "quick_assessment",
+      "execution_time": 2.71095,
+      "error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'Publisher Model `projects/gft-bu-gcp/locations/us-central1/publishers/google/models/gemini-3-pro-preview` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions', 'status': 'NOT_FOUND'}}",
+      "passed": false,
+      "timestamp": "2025-12-07T02:46:14.784641"
+    },
+    {
+      "test_id": "TC-STATUS-001",
+      "scenario": "Consulta de Status do Sistema",
+      "category": "system_status",
+      "subcategory": "health_check",
+      "execution_time": 2.586816,
+      "error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'Publisher Model `projects/gft-bu-gcp/locations/us-central1/publishers/google/models/gemini-3-pro-preview` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions', 'status': 'NOT_FOUND'}}",
+      "passed": false,
+      "timestamp": "2025-12-07T02:46:17.373462"
+    },
+    {
+      "test_id": "TC-ERROR-001",
+      "scenario": "Tratamento de Erro - Documento Inválido",
+      "category": "error_handling",
+      "subcategory": "invalid_input",
+      "execution_time": 2.72987,
+      "error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'Publisher Model `projects/gft-bu-gcp/locations/us-central1/publishers/google/models/gemini-3-pro-preview` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions', 'status': 'NOT_FOUND'}}",
+      "passed": false,
+      "timestamp": "2025-12-07T02:46:20.103332"
+    }
+  ]
+}

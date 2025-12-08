@@ -1,0 +1,770 @@
+{
+  "timestamp": "20251207_024952",
+  "total_tests": 7,
+  "passed": 0,
+  "failed": 7,
+  "results": [
+    {
+      "test_id": "TC-DOC-001",
+      "scenario": "Análise de Especificação Técnica Completa",
+      "category": "document_analysis",
+      "subcategory": "technical_specification",
+      "execution_time": 6.568986,
+      "iterations": 1,
+      "response": "Como não foram enviados os documentos \"Entendimento da Demanda\" e \"Respostas do Fornecedor\", que são **obrigatórios**, não posso prosseguir com a análise. Por favor, envie-os para que eu possa gerar o parecer técnico.\n",
+      "evaluation": {
+        "overall_score": 0.36354166666666665,
+        "metrics": {
+          "success": {
+            "score": 0.3,
+            "details": {
+              "metric": "success",
+              "pass": false,
+              "reason": "Response unclear or incomplete"
+            }
+          },
+          "response_quality": {
+            "score": 0.6,
+            "details": {
+              "metric": "response_quality",
+              "components": {
+                "length": "short but acceptable",
+                "structure": "well-structured",
+                "professionalism": "adequate",
+                "actionability": "limited actionability"
+              },
+              "score": 0.6
+            }
+          },
+          "document_analysis": {
+            "score": 0.2,
+            "feedback": "✅ Parecer/análise presente | ⚠️ Análise arquitetural limitada (0 elementos) | ❌ Identificação de riscos ausente | ⚠️ Recomendações ausentes | ⚠️ Análise de conformidade limitada",
+            "details": {
+              "points_earned": 1.0,
+              "max_points": 5.0,
+              "coverage": "20.0%"
+            }
+          },
+          "spreadsheet_analysis": {
+            "score": 0.0,
+            "feedback": "⚠️ Extração de dados limitada (0 indicadores) | ⚠️ Gaps/problemas não identificados explicitamente | ⚠️ Métricas calculadas não evidentes | ⚠️ Avaliação de qualidade não explícita | ⚠️ Faltam insights acionáveis",
+            "details": {
+              "points_earned": 0.0,
+              "max_points": 5.0,
+              "coverage": "0.0%"
+            }
+          },
+          "framework_adherence": {
+            "score": 0.125,
+            "feedback": "❌ Cobertura insuficiente dos pilares (1/8) | Pilares identificados: 2-Aderência Técnica",
+            "details": {
+              "points_earned": 1.0,
+              "max_points": 8.0,
+              "pillars_found": 1,
+              "pillars_list": [
+                "2-Aderência Técnica"
+              ],
+              "coverage": "12.5%"
+            }
+          },
+          "tool_usage": {
+            "score": 0.45,
+            "feedback": "⚠️ Uso de ferramentas não evidente | ✅ Execução aparentemente bem-sucedida | ⚠️ JSON inválido ou formato não estruturado | ⚠️ Resposta moderada (231 chars)",
+            "details": {
+              "points_earned": 1.8,
+              "max_points": 4.0,
+              "tools_detected": 0,
+              "response_length": 231,
+              "coverage": "45.0%"
+            }
+          },
+          "response_completeness": {
+            "score": 0.3,
+            "feedback": "✅ Parecer/opinião | ❌ Justificativa ausente | ❌ Riscos ausente | ❌ Próximos passos ausente | ⚠️ Resposta pode ter mais detalhes",
+            "details": {
+              "points_earned": 1.5,
+              "max_points": 5.0,
+              "elements_found": 1,
+              "total_elements": 4,
+              "response_length": 231,
+              "coverage": "30.0%"
+            }
+          },
+          "performance": {
+            "score": 0.9333333333333332,
+            "feedback": "✅ Tempo excelente: 6.57s | ✅ Iterações eficientes: 1 | ⚠️ Resposta muito concisa (231 chars)",
+            "details": {
+              "points_earned": 2.8,
+              "max_points": 3.0,
+              "execution_time": 6.568986,
+              "iterations": 1,
+              "response_length": 231,
+              "coverage": "93.3%"
+            }
+          }
+        },
+        "summary": {
+          "total_metrics": 8,
+          "passed_metrics": 1,
+          "failed_metrics": 7
+        }
+      },
+      "passed": false,
+      "timestamp": "2025-12-07T02:49:15.265227"
+    },
+    {
+      "test_id": "TC-DOC-002",
+      "scenario": "Análise de Proposta Comercial de Fornecedor",
+      "category": "document_analysis",
+      "subcategory": "vendor_proposal",
+      "execution_time": 5.547207,
+      "iterations": 1,
+      "response": "Ok, para prosseguir com a análise, preciso também do documento \"Entendimento da Demanda\" para comparar a proposta do fornecedor com os requisitos e expectativas do seu negócio.\n\nSem este documento, a avaliação será superficial.\n\nCaso possua também os \"Documentos de Fundamentação\", eles podem enriquecer a análise, mas não são obrigatórios nesta etapa.\n\nPor favor, me envie os documentos para que eu possa realizar a avaliação completa.\n",
+      "evaluation": {
+        "overall_score": 0.36979166666666663,
+        "metrics": {
+          "success": {
+            "score": 0.3,
+            "details": {
+              "metric": "success",
+              "pass": false,
+              "reason": "Response unclear or incomplete"
+            }
+          },
+          "response_quality": {
+            "score": 0.425,
+            "details": {
+              "metric": "response_quality",
+              "components": {
+                "length": "short but acceptable",
+                "structure": "unstructured",
+                "professionalism": "adequate",
+                "actionability": "limited actionability"
+              },
+              "score": 0.425
+            }
+          },
+          "document_analysis": {
+            "score": 0.2,
+            "feedback": "❌ Parecer final ausente | ⚠️ Análise arquitetural limitada (0 elementos) | ❌ Identificação de riscos ausente | ⚠️ Recomendações ausentes | ✅ Análise de conformidade presente (1 menções)",
+            "details": {
+              "points_earned": 1.0,
+              "max_points": 5.0,
+              "coverage": "20.0%"
+            }
+          },
+          "spreadsheet_analysis": {
+            "score": 0.2,
+            "feedback": "⚠️ Extração de dados limitada (0 indicadores) | ⚠️ Gaps/problemas não identificados explicitamente | ⚠️ Métricas calculadas não evidentes | ✅ Avaliação de qualidade de dados | ⚠️ Faltam insights acionáveis",
+            "details": {
+              "points_earned": 1.0,
+              "max_points": 5.0,
+              "coverage": "20.0%"
+            }
+          },
+          "framework_adherence": {
+            "score": 0.25,
+            "feedback": "❌ Cobertura insuficiente dos pilares (2/8) | Pilares identificados: 1-Requisitos Negócio, 4-Governança/Compliance",
+            "details": {
+              "points_earned": 2.0,
+              "max_points": 8.0,
+              "pillars_found": 2,
+              "pillars_list": [
+                "1-Requisitos Negócio",
+                "4-Governança/Compliance"
+              ],
+              "coverage": "25.0%"
+            }
+          },
+          "tool_usage": {
+            "score": 0.45,
+            "feedback": "⚠️ Uso de ferramentas não evidente | ✅ Execução aparentemente bem-sucedida | ⚠️ JSON inválido ou formato não estruturado | ⚠️ Resposta moderada (456 chars)",
+            "details": {
+              "points_earned": 1.8,
+              "max_points": 4.0,
+              "tools_detected": 0,
+              "response_length": 456,
+              "coverage": "45.0%"
+            }
+          },
+          "response_completeness": {
+            "score": 0.2,
+            "feedback": "❌ Parecer/opinião ausente | ❌ Justificativa ausente | ❌ Riscos ausente | ✅ Próximos passos | ⚠️ Resposta pode ter mais detalhes",
+            "details": {
+              "points_earned": 1.0,
+              "max_points": 5.0,
+              "elements_found": 1,
+              "total_elements": 4,
+              "response_length": 456,
+              "coverage": "20.0%"
+            }
+          },
+          "performance": {
+            "score": 0.9333333333333332,
+            "feedback": "✅ Tempo excelente: 5.55s | ✅ Iterações eficientes: 1 | ⚠️ Resposta muito concisa (456 chars)",
+            "details": {
+              "points_earned": 2.8,
+              "max_points": 3.0,
+              "execution_time": 5.547207,
+              "iterations": 1,
+              "response_length": 456,
+              "coverage": "93.3%"
+            }
+          }
+        },
+        "summary": {
+          "total_metrics": 8,
+          "passed_metrics": 1,
+          "failed_metrics": 7
+        }
+      },
+      "passed": false,
+      "timestamp": "2025-12-07T02:49:20.815121"
+    },
+    {
+      "test_id": "TC-SHEET-001",
+      "scenario": "Análise de Matriz de Requisitos (Excel)",
+      "category": "spreadsheet_analysis",
+      "subcategory": "requirements_matrix",
+      "execution_time": 5.288862,
+      "iterations": 1,
+      "response": "📥 **DOCUMENTOS RECEBIDOS**\n\n✅ Entendimento da Demanda\n✅ Respostas do Fornecedor\n⚠️ Documentos de Fundamentação (opcional)\n\n---\n\n🔍 **Próximo Passo**\nPosso prosseguir com a análise detalhada e elaboração do parecer técnico?\n",
+      "evaluation": {
+        "overall_score": 0.39791666666666664,
+        "metrics": {
+          "success": {
+            "score": 0.3,
+            "details": {
+              "metric": "success",
+              "pass": false,
+              "reason": "Response unclear or incomplete"
+            }
+          },
+          "response_quality": {
+            "score": 0.775,
+            "details": {
+              "metric": "response_quality",
+              "components": {
+                "length": "short but acceptable",
+                "structure": "well-structured",
+                "professionalism": "adequate",
+                "actionability": "actionable"
+              },
+              "score": 0.775
+            }
+          },
+          "document_analysis": {
+            "score": 0.2,
+            "feedback": "✅ Parecer/análise presente | ⚠️ Análise arquitetural limitada (0 elementos) | ❌ Identificação de riscos ausente | ⚠️ Recomendações ausentes | ⚠️ Análise de conformidade limitada",
+            "details": {
+              "points_earned": 1.0,
+              "max_points": 5.0,
+              "coverage": "20.0%"
+            }
+          },
+          "spreadsheet_analysis": {
+            "score": 0.0,
+            "feedback": "⚠️ Extração de dados limitada (0 indicadores) | ⚠️ Gaps/problemas não identificados explicitamente | ⚠️ Métricas calculadas não evidentes | ⚠️ Avaliação de qualidade não explícita | ⚠️ Faltam insights acionáveis",
+            "details": {
+              "points_earned": 0.0,
+              "max_points": 5.0,
+              "coverage": "0.0%"
+            }
+          },
+          "framework_adherence": {
+            "score": 0.125,
+            "feedback": "❌ Cobertura insuficiente dos pilares (1/8) | Pilares identificados: 2-Aderência Técnica",
+            "details": {
+              "points_earned": 1.0,
+              "max_points": 8.0,
+              "pillars_found": 1,
+              "pillars_list": [
+                "2-Aderência Técnica"
+              ],
+              "coverage": "12.5%"
+            }
+          },
+          "tool_usage": {
+            "score": 0.45,
+            "feedback": "⚠️ Uso de ferramentas não evidente | ✅ Execução aparentemente bem-sucedida | ⚠️ JSON inválido ou formato não estruturado | ⚠️ Resposta moderada (244 chars)",
+            "details": {
+              "points_earned": 1.8,
+              "max_points": 4.0,
+              "tools_detected": 0,
+              "response_length": 244,
+              "coverage": "45.0%"
+            }
+          },
+          "response_completeness": {
+            "score": 0.4,
+            "feedback": "✅ Parecer/opinião | ❌ Justificativa ausente | ❌ Riscos ausente | ✅ Próximos passos | ⚠️ Resposta pode ter mais detalhes",
+            "details": {
+              "points_earned": 2.0,
+              "max_points": 5.0,
+              "elements_found": 2,
+              "total_elements": 4,
+              "response_length": 244,
+              "coverage": "40.0%"
+            }
+          },
+          "performance": {
+            "score": 0.9333333333333332,
+            "feedback": "✅ Tempo excelente: 5.29s | ✅ Iterações eficientes: 1 | ⚠️ Resposta muito concisa (244 chars)",
+            "details": {
+              "points_earned": 2.8,
+              "max_points": 3.0,
+              "execution_time": 5.288862,
+              "iterations": 1,
+              "response_length": 244,
+              "coverage": "93.3%"
+            }
+          }
+        },
+        "summary": {
+          "total_metrics": 8,
+          "passed_metrics": 2,
+          "failed_metrics": 6
+        }
+      },
+      "passed": false,
+      "timestamp": "2025-12-07T02:49:26.108277"
+    },
+    {
+      "test_id": "TC-CONTRACT-001",
+      "scenario": "Extração de Dados de Contrato",
+      "category": "contract_extraction",
+      "subcategory": "full_contract",
+      "execution_time": 7.15091,
+      "iterations": 1,
+      "response": "Como sou um Arquiteto de Negócios e Soluções Sênior especializado em avaliação de fornecedores e soluções tecnológicas, minha missão principal é analisar criticamente propostas de fornecedores comparando-as com os requisitos de demanda organizacional. No entanto, a solicitação atual se refere à extração de dados de um contrato existente, o que está fora do meu escopo de atuação. Eu sou especializado em *avaliação*, não em *extração de dados*.\n\nPor favor, reformule sua solicitação ou direcione-a para o especialista correto.",
+      "evaluation": {
+        "overall_score": 0.39375,
+        "metrics": {
+          "success": {
+            "score": 0.3,
+            "details": {
+              "metric": "success",
+              "pass": false,
+              "reason": "Response unclear or incomplete"
+            }
+          },
+          "response_quality": {
+            "score": 0.525,
+            "details": {
+              "metric": "response_quality",
+              "components": {
+                "length": "appropriate",
+                "structure": "unstructured",
+                "professionalism": "adequate",
+                "actionability": "limited actionability"
+              },
+              "score": 0.525
+            }
+          },
+          "document_analysis": {
+            "score": 0.0,
+            "feedback": "❌ Parecer final ausente | ⚠️ Análise arquitetural limitada (0 elementos) | ❌ Identificação de riscos ausente | ⚠️ Recomendações ausentes | ⚠️ Análise de conformidade limitada",
+            "details": {
+              "points_earned": 0.0,
+              "max_points": 5.0,
+              "coverage": "0.0%"
+            }
+          },
+          "spreadsheet_analysis": {
+            "score": 0.2,
+            "feedback": "⚠️ Extração de dados limitada (0 indicadores) | ⚠️ Gaps/problemas não identificados explicitamente | ⚠️ Métricas calculadas não evidentes | ✅ Avaliação de qualidade de dados | ⚠️ Faltam insights acionáveis",
+            "details": {
+              "points_earned": 1.0,
+              "max_points": 5.0,
+              "coverage": "20.0%"
+            }
+          },
+          "framework_adherence": {
+            "score": 0.25,
+            "feedback": "❌ Cobertura insuficiente dos pilares (2/8) | Pilares identificados: 1-Requisitos Negócio, 5-Maturidade Tecnológica",
+            "details": {
+              "points_earned": 2.0,
+              "max_points": 8.0,
+              "pillars_found": 2,
+              "pillars_list": [
+                "1-Requisitos Negócio",
+                "5-Maturidade Tecnológica"
+              ],
+              "coverage": "25.0%"
+            }
+          },
+          "tool_usage": {
+            "score": 0.575,
+            "feedback": "⚠️ Uso de ferramentas não evidente | ✅ Execução aparentemente bem-sucedida | ⚠️ JSON inválido ou formato não estruturado | ✅ Resposta completa (542 chars)",
+            "details": {
+              "points_earned": 2.3,
+              "max_points": 4.0,
+              "tools_detected": 0,
+              "response_length": 542,
+              "coverage": "57.5%"
+            }
+          },
+          "response_completeness": {
+            "score": 0.3,
+            "feedback": "❌ Parecer/opinião ausente | ❌ Justificativa ausente | ❌ Riscos ausente | ✅ Próximos passos | ⚠️ Nível de detalhe moderado",
+            "details": {
+              "points_earned": 1.5,
+              "max_points": 5.0,
+              "elements_found": 1,
+              "total_elements": 4,
+              "response_length": 542,
+              "coverage": "30.0%"
+            }
+          },
+          "performance": {
+            "score": 1.0,
+            "feedback": "✅ Tempo excelente: 7.15s | ✅ Iterações eficientes: 1 | ✅ Resposta otimizada (542 chars)",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 3.0,
+              "execution_time": 7.15091,
+              "iterations": 1,
+              "response_length": 542,
+              "coverage": "100.0%"
+            }
+          }
+        },
+        "summary": {
+          "total_metrics": 8,
+          "passed_metrics": 1,
+          "failed_metrics": 7
+        }
+      },
+      "passed": false,
+      "timestamp": "2025-12-07T02:49:33.261426"
+    },
+    {
+      "test_id": "TC-OPINION-001",
+      "scenario": "Parecer Simples Rápido",
+      "category": "simple_opinion",
+      "subcategory": "quick_assessment",
+      "execution_time": 5.397773,
+      "iterations": 1,
+      "response": "Para realizar uma análise completa, por favor, forneça os documentos:\n\n1.  **Entendimento da Demanda** (detalhes dos requisitos, objetivos, etc.)\n2.  **Respostas do Fornecedor** (proposta técnica e comercial do Kong Enterprise)\n\nSem esses documentos, posso apenas fornecer considerações genéricas.",
+      "evaluation": {
+        "overall_score": 0.35416666666666663,
+        "metrics": {
+          "success": {
+            "score": 0.3,
+            "details": {
+              "metric": "success",
+              "pass": false,
+              "reason": "Response unclear or incomplete"
+            }
+          },
+          "response_quality": {
+            "score": 0.6,
+            "details": {
+              "metric": "response_quality",
+              "components": {
+                "length": "short but acceptable",
+                "structure": "well-structured",
+                "professionalism": "adequate",
+                "actionability": "limited actionability"
+              },
+              "score": 0.6
+            }
+          },
+          "document_analysis": {
+            "score": 0.0,
+            "feedback": "❌ Parecer final ausente | ⚠️ Análise arquitetural limitada (0 elementos) | ❌ Identificação de riscos ausente | ⚠️ Recomendações ausentes | ⚠️ Análise de conformidade limitada",
+            "details": {
+              "points_earned": 0.0,
+              "max_points": 5.0,
+              "coverage": "0.0%"
+            }
+          },
+          "spreadsheet_analysis": {
+            "score": 0.0,
+            "feedback": "⚠️ Extração de dados limitada (0 indicadores) | ⚠️ Gaps/problemas não identificados explicitamente | ⚠️ Métricas calculadas não evidentes | ⚠️ Avaliação de qualidade não explícita | ⚠️ Faltam insights acionáveis",
+            "details": {
+              "points_earned": 0.0,
+              "max_points": 5.0,
+              "coverage": "0.0%"
+            }
+          },
+          "framework_adherence": {
+            "score": 0.25,
+            "feedback": "❌ Cobertura insuficiente dos pilares (2/8) | Pilares identificados: 1-Requisitos Negócio, 2-Aderência Técnica",
+            "details": {
+              "points_earned": 2.0,
+              "max_points": 8.0,
+              "pillars_found": 2,
+              "pillars_list": [
+                "1-Requisitos Negócio",
+                "2-Aderência Técnica"
+              ],
+              "coverage": "25.0%"
+            }
+          },
+          "tool_usage": {
+            "score": 0.45,
+            "feedback": "⚠️ Uso de ferramentas não evidente | ✅ Execução aparentemente bem-sucedida | ⚠️ JSON inválido ou formato não estruturado | ⚠️ Resposta moderada (314 chars)",
+            "details": {
+              "points_earned": 1.8,
+              "max_points": 4.0,
+              "tools_detected": 0,
+              "response_length": 314,
+              "coverage": "45.0%"
+            }
+          },
+          "response_completeness": {
+            "score": 0.3,
+            "feedback": "❌ Parecer/opinião ausente | ❌ Justificativa ausente | ❌ Riscos ausente | ❌ Próximos passos ausente | ⚠️ Resposta pode ter mais detalhes",
+            "details": {
+              "points_earned": 1.5,
+              "max_points": 5.0,
+              "elements_found": 0,
+              "total_elements": 4,
+              "response_length": 314,
+              "coverage": "30.0%"
+            }
+          },
+          "performance": {
+            "score": 0.9333333333333332,
+            "feedback": "✅ Tempo excelente: 5.40s | ✅ Iterações eficientes: 1 | ⚠️ Resposta muito concisa (314 chars)",
+            "details": {
+              "points_earned": 2.8,
+              "max_points": 3.0,
+              "execution_time": 5.397773,
+              "iterations": 1,
+              "response_length": 314,
+              "coverage": "93.3%"
+            }
+          }
+        },
+        "summary": {
+          "total_metrics": 8,
+          "passed_metrics": 1,
+          "failed_metrics": 7
+        }
+      },
+      "passed": false,
+      "timestamp": "2025-12-07T02:49:38.661782"
+    },
+    {
+      "test_id": "TC-STATUS-001",
+      "scenario": "Consulta de Status do Sistema",
+      "category": "system_status",
+      "subcategory": "health_check",
+      "execution_time": 5.441971,
+      "iterations": 1,
+      "response": "Olá! Para iniciar a análise, por favor, forneça os seguintes documentos:\n\n1.  **Entendimento da Demanda** (obrigatório): Documento detalhando os objetivos, requisitos e contexto do negócio.\n2.  **Respostas do Fornecedor** (obrigatório): Proposta técnica e comercial do fornecedor.\n3.  **Documentos de Fundamentação** (opcional): Especificações técnicas detalhadas, resultados de Proof of Concept (POCs), normas e regulamentações aplicáveis, análises de mercado ou benchmarking.\n\nAssim que os documentos forem enviados, confirmarei o recebimento e prosseguirei com a avaliação detalhada.",
+      "evaluation": {
+        "overall_score": 0.415625,
+        "metrics": {
+          "success": {
+            "score": 0.3,
+            "details": {
+              "metric": "success",
+              "pass": false,
+              "reason": "Response unclear or incomplete"
+            }
+          },
+          "response_quality": {
+            "score": 0.7,
+            "details": {
+              "metric": "response_quality",
+              "components": {
+                "length": "appropriate",
+                "structure": "well-structured",
+                "professionalism": "adequate",
+                "actionability": "limited actionability"
+              },
+              "score": 0.7
+            }
+          },
+          "document_analysis": {
+            "score": 0.0,
+            "feedback": "❌ Parecer final ausente | ⚠️ Análise arquitetural limitada (0 elementos) | ❌ Identificação de riscos ausente | ⚠️ Recomendações ausentes | ⚠️ Análise de conformidade limitada",
+            "details": {
+              "points_earned": 0.0,
+              "max_points": 5.0,
+              "coverage": "0.0%"
+            }
+          },
+          "spreadsheet_analysis": {
+            "score": 0.0,
+            "feedback": "⚠️ Extração de dados limitada (0 indicadores) | ⚠️ Gaps/problemas não identificados explicitamente | ⚠️ Métricas calculadas não evidentes | ⚠️ Avaliação de qualidade não explícita | ⚠️ Faltam insights acionáveis",
+            "details": {
+              "points_earned": 0.0,
+              "max_points": 5.0,
+              "coverage": "0.0%"
+            }
+          },
+          "framework_adherence": {
+            "score": 0.25,
+            "feedback": "❌ Cobertura insuficiente dos pilares (2/8) | Pilares identificados: 1-Requisitos Negócio, 2-Aderência Técnica",
+            "details": {
+              "points_earned": 2.0,
+              "max_points": 8.0,
+              "pillars_found": 2,
+              "pillars_list": [
+                "1-Requisitos Negócio",
+                "2-Aderência Técnica"
+              ],
+              "coverage": "25.0%"
+            }
+          },
+          "tool_usage": {
+            "score": 0.575,
+            "feedback": "⚠️ Uso de ferramentas não evidente | ✅ Execução aparentemente bem-sucedida | ⚠️ JSON inválido ou formato não estruturado | ✅ Resposta completa (604 chars)",
+            "details": {
+              "points_earned": 2.3,
+              "max_points": 4.0,
+              "tools_detected": 0,
+              "response_length": 604,
+              "coverage": "57.5%"
+            }
+          },
+          "response_completeness": {
+            "score": 0.5,
+            "feedback": "❌ Parecer/opinião ausente | ❌ Justificativa ausente | ❌ Riscos ausente | ✅ Próximos passos | ⚠️ Nível de detalhe moderado",
+            "details": {
+              "points_earned": 2.5,
+              "max_points": 5.0,
+              "elements_found": 1,
+              "total_elements": 4,
+              "response_length": 604,
+              "coverage": "50.0%"
+            }
+          },
+          "performance": {
+            "score": 1.0,
+            "feedback": "✅ Tempo excelente: 5.44s | ✅ Iterações eficientes: 1 | ✅ Resposta otimizada (604 chars)",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 3.0,
+              "execution_time": 5.441971,
+              "iterations": 1,
+              "response_length": 604,
+              "coverage": "100.0%"
+            }
+          }
+        },
+        "summary": {
+          "total_metrics": 8,
+          "passed_metrics": 2,
+          "failed_metrics": 6
+        }
+      },
+      "passed": false,
+      "timestamp": "2025-12-07T02:49:44.122812"
+    },
+    {
+      "test_id": "TC-ERROR-001",
+      "scenario": "Tratamento de Erro - Documento Inválido",
+      "category": "error_handling",
+      "subcategory": "invalid_input",
+      "execution_time": 8.667228,
+      "iterations": 1,
+      "response": "Para iniciar a análise, preciso que você me forneça os seguintes documentos:\n\n1.  **Entendimento da Demanda** - Detalhando os objetivos, requisitos e contexto do negócio.\n2.  **Respostas do Fornecedor** - Apresentando a proposta técnica e comercial do fornecedor.\n\nOpcionalmente, você pode adicionar:\n\n3.  **Documentos de Fundamentação** - Como especificações técnicas detalhadas, resultados de Proof of Concept (POCs) e normas relevantes.\n\nAssim que tiver esses documentos, poderei prosseguir com a avaliação da proposta seguindo o framework de 8 pilares e gerar um parecer completo.\n",
+      "evaluation": {
+        "overall_score": 0.534375,
+        "metrics": {
+          "success": {
+            "score": 0.3,
+            "details": {
+              "metric": "success",
+              "pass": false,
+              "reason": "Response unclear or incomplete"
+            }
+          },
+          "response_quality": {
+            "score": 0.825,
+            "details": {
+              "metric": "response_quality",
+              "components": {
+                "length": "appropriate",
+                "structure": "well-structured",
+                "professionalism": "professional",
+                "actionability": "limited actionability"
+              },
+              "score": 0.825
+            }
+          },
+          "document_analysis": {
+            "score": 0.4,
+            "feedback": "✅ Parecer/análise presente | ⚠️ Análise arquitetural limitada (0 elementos) | ❌ Identificação de riscos ausente | ⚠️ Recomendações ausentes | ✅ Análise de conformidade presente (1 menções)",
+            "details": {
+              "points_earned": 2.0,
+              "max_points": 5.0,
+              "coverage": "40.0%"
+            }
+          },
+          "spreadsheet_analysis": {
+            "score": 0.2,
+            "feedback": "⚠️ Extração de dados limitada (0 indicadores) | ⚠️ Gaps/problemas não identificados explicitamente | ⚠️ Métricas calculadas não evidentes | ✅ Avaliação de qualidade de dados | ⚠️ Faltam insights acionáveis",
+            "details": {
+              "points_earned": 1.0,
+              "max_points": 5.0,
+              "coverage": "20.0%"
+            }
+          },
+          "framework_adherence": {
+            "score": 0.375,
+            "feedback": "❌ Cobertura insuficiente dos pilares (3/8) | Pilares identificados: 1-Requisitos Negócio, 2-Aderência Técnica, 4-Governança/Compliance",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 8.0,
+              "pillars_found": 3,
+              "pillars_list": [
+                "1-Requisitos Negócio",
+                "2-Aderência Técnica",
+                "4-Governança/Compliance"
+              ],
+              "coverage": "37.5%"
+            }
+          },
+          "tool_usage": {
+            "score": 0.575,
+            "feedback": "⚠️ Uso de ferramentas não evidente | ✅ Execução aparentemente bem-sucedida | ⚠️ JSON inválido ou formato não estruturado | ✅ Resposta completa (607 chars)",
+            "details": {
+              "points_earned": 2.3,
+              "max_points": 4.0,
+              "tools_detected": 0,
+              "response_length": 607,
+              "coverage": "57.5%"
+            }
+          },
+          "response_completeness": {
+            "score": 0.6,
+            "feedback": "✅ Parecer/opinião | ❌ Justificativa ausente | ❌ Riscos ausente | ✅ Próximos passos | ⚠️ Nível de detalhe moderado",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 5.0,
+              "elements_found": 2,
+              "total_elements": 4,
+              "response_length": 607,
+              "coverage": "60.0%"
+            }
+          },
+          "performance": {
+            "score": 1.0,
+            "feedback": "✅ Tempo excelente: 8.67s | ✅ Iterações eficientes: 1 | ✅ Resposta otimizada (607 chars)",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 3.0,
+              "execution_time": 8.667228,
+              "iterations": 1,
+              "response_length": 607,
+              "coverage": "100.0%"
+            }
+          }
+        },
+        "summary": {
+          "total_metrics": 8,
+          "passed_metrics": 2,
+          "failed_metrics": 6
+        }
+      },
+      "passed": false,
+      "timestamp": "2025-12-07T02:49:52.793042"
+    }
+  ]
+}

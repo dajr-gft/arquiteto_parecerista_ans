@@ -1,0 +1,799 @@
+{
+  "timestamp": "20251207_030135",
+  "total_tests": 7,
+  "passed": 6,
+  "failed": 1,
+  "results": [
+    {
+      "test_id": "TC-DOC-001",
+      "scenario": "Análise de Especificação Técnica Completa",
+      "category": "document_analysis",
+      "subcategory": "technical_specification",
+      "execution_time": 24.201772,
+      "iterations": 1,
+      "response": "Entendido. Agradeço pelo envio do documento.\n\nAnalisei o arquivo `especificacao_api_pagamentos.pdf` e o identifiquei como o **📋 ENTENDIMENTO DA DEMANDA**. Este documento detalha os requisitos técnicos e funcionais para a solução de API PIX.\n\nMinha missão principal é realizar uma análise comparativa crítica entre as necessidades da organização (a Demanda) e a proposta de solução de um fornecedor.\n\nPara gerar o parecer arquitetural completo, preciso de um segundo documento obrigatório: as **📝 RESPOSTAS DO FORNECEDOR** (contendo a proposta técnica e comercial que responde a esta demanda).\n\n**Por favor, envie a proposta do fornecedor para que eu possa prosseguir com a avaliação completa.**\n\n---\n\nAssim que receber os dois documentos obrigatórios, realizarei a análise detalhada com base nos 8 pilares e gerarei o parecer técnico estruturado, incluindo:\n\n*   **Síntese Executiva** (com o veredito)\n*   **Análise Detalhada** (Pontos Fortes e Gaps)\n*   **Análise de Riscos** (Técnicos, Operacionais, Comerciais)\n*   **Recomendação** (Condicionantes e Mitigações)\n*   **Justificativa Fundamentada**\n\nAguardo o envio do documento restante para iniciarmos.",
+      "evaluation": {
+        "overall_score": 0.7849999999999999,
+        "metrics": {
+          "success": {
+            "score": 1.0,
+            "details": {
+              "metric": "success",
+              "pass": true,
+              "reason": "Agent provided analysis despite mentioning document limitations"
+            }
+          },
+          "response_quality": {
+            "score": 1.0,
+            "details": {
+              "metric": "response_quality",
+              "components": {
+                "length": "appropriate",
+                "structure": "well-structured",
+                "professionalism": "professional",
+                "actionability": "actionable"
+              },
+              "score": 1.0
+            }
+          },
+          "document_analysis": {
+            "score": 0.9400000000000001,
+            "feedback": "✅ Parecer/análise presente | ⚠️ Análise arquitetural parcial (1 elementos) | ✅ Identificação de riscos presente | ✅ Recomendações fornecidas | ✅ Análise de conformidade presente (1 menções)",
+            "details": {
+              "points_earned": 4.7,
+              "max_points": 5.0,
+              "coverage": "94.0%"
+            }
+          },
+          "spreadsheet_analysis": {
+            "score": 0.33999999999999997,
+            "feedback": "⚠️ Extração de dados limitada (0 indicadores) | ⚠️ Gaps/problemas parcialmente identificados | ⚠️ Métricas calculadas não evidentes | ✅ Avaliação de qualidade de dados | ⚠️ Faltam insights acionáveis",
+            "details": {
+              "points_earned": 1.7,
+              "max_points": 5.0,
+              "coverage": "34.0%"
+            }
+          },
+          "framework_adherence": {
+            "score": 0.625,
+            "feedback": "⚠️ Cobertura parcial dos pilares (5/8) | Pilares identificados: 1-Requisitos Negócio, 2-Aderência Técnica, 3-Capacidade Operacional, 4-Governança/Compliance, 6-Análise Riscos",
+            "details": {
+              "points_earned": 5.0,
+              "max_points": 8.0,
+              "pillars_found": 5,
+              "pillars_list": [
+                "1-Requisitos Negócio",
+                "2-Aderência Técnica",
+                "3-Capacidade Operacional",
+                "4-Governança/Compliance",
+                "6-Análise Riscos"
+              ],
+              "coverage": "62.5%"
+            }
+          },
+          "tool_usage": {
+            "score": 0.575,
+            "feedback": "⚠️ Uso de ferramentas não evidente | ✅ Execução aparentemente bem-sucedida | ⚠️ JSON inválido ou formato não estruturado | ✅ Resposta completa (1187 chars)",
+            "details": {
+              "points_earned": 2.3,
+              "max_points": 4.0,
+              "tools_detected": 0,
+              "response_length": 1187,
+              "coverage": "57.5%"
+            }
+          },
+          "response_completeness": {
+            "score": 0.8,
+            "feedback": "✅ Parecer/opinião | ✅ Justificativa | ✅ Riscos | ✅ Próximos passos | ✅ Nível de detalhe adequado",
+            "details": {
+              "points_earned": 4.0,
+              "max_points": 5.0,
+              "elements_found": 4,
+              "total_elements": 4,
+              "response_length": 1187,
+              "coverage": "80.0%"
+            }
+          },
+          "performance": {
+            "score": 1.0,
+            "feedback": "✅ Tempo excelente: 24.20s | ✅ Iterações eficientes: 1 | ✅ Resposta otimizada (1187 chars)",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 3.0,
+              "execution_time": 24.201772,
+              "iterations": 1,
+              "response_length": 1187,
+              "coverage": "100.0%"
+            }
+          }
+        },
+        "summary": {
+          "total_metrics": 8,
+          "passed_metrics": 5,
+          "failed_metrics": 3
+        }
+      },
+      "passed": true,
+      "timestamp": "2025-12-07T02:59:35.035168"
+    },
+    {
+      "test_id": "TC-DOC-002",
+      "scenario": "Análise de Proposta Comercial de Fornecedor",
+      "category": "document_analysis",
+      "subcategory": "vendor_proposal",
+      "execution_time": 29.775208,
+      "iterations": 1,
+      "response": "Olá. Como Arquiteto de Negócios e Soluções, estou pronto para iniciar a análise.\n\nNo entanto, para gerar um parecer técnico completo e fundamentado, preciso de dois documentos obrigatórios: o **Entendimento da Demanda** e as **Respostas do Fornecedor**.\n\nVocê forneceu a proposta da `CloudTech Solutions`, que corresponde às **Respostas do Fornecedor**.\n\n**Falta o documento essencial: 📋 Entendimento da Demanda.**\n\nSem ele, é impossível avaliar criticamente se a proposta atende aos seus requisitos estratégicos, técnicos, financeiros e regulatórios. Por exemplo, não consigo saber:\n*   Qual o orçamento aprovado para comparar com os R$ 150.000 + R$ 80.000/mês?\n*   Qual o SLA de disponibilidade requerido pelo seu negócio para comparar com os 99.95% oferecidos?\n*   Quais as aplicações a serem migradas e seus requisitos específicos?\n*   Quais as restrições de prazo e conformidade (além das certificações padrão)?\n\n**Por favor, envie o documento \"Entendimento da Demanda\" para que eu possa prosseguir com uma avaliação completa e acionável.** Assim que o receber, confirmarei e solicitarei sua aprovação para iniciar a elaboração do parecer.",
+      "evaluation": {
+        "overall_score": 0.6975,
+        "metrics": {
+          "success": {
+            "score": 1.0,
+            "details": {
+              "metric": "success",
+              "pass": true,
+              "reason": "Agent provided analysis despite mentioning document limitations"
+            }
+          },
+          "response_quality": {
+            "score": 0.825,
+            "details": {
+              "metric": "response_quality",
+              "components": {
+                "length": "appropriate",
+                "structure": "well-structured",
+                "professionalism": "professional",
+                "actionability": "limited actionability"
+              },
+              "score": 0.825
+            }
+          },
+          "document_analysis": {
+            "score": 0.54,
+            "feedback": "✅ Parecer/análise presente | ⚠️ Análise arquitetural parcial (2 elementos) | ❌ Identificação de riscos ausente | ⚠️ Recomendações ausentes | ✅ Análise de conformidade presente (3 menções)",
+            "details": {
+              "points_earned": 2.7,
+              "max_points": 5.0,
+              "coverage": "54.0%"
+            }
+          },
+          "spreadsheet_analysis": {
+            "score": 0.54,
+            "feedback": "⚠️ Extração de dados limitada (0 indicadores) | ⚠️ Gaps/problemas parcialmente identificados | ✅ Métricas calculadas presente | ✅ Avaliação de qualidade de dados | ⚠️ Faltam insights acionáveis",
+            "details": {
+              "points_earned": 2.7,
+              "max_points": 5.0,
+              "coverage": "54.0%"
+            }
+          },
+          "framework_adherence": {
+            "score": 0.5,
+            "feedback": "⚠️ Cobertura parcial dos pilares (4/8) | Pilares identificados: 1-Requisitos Negócio, 2-Aderência Técnica, 4-Governança/Compliance, 7-Viabilidade Implementação",
+            "details": {
+              "points_earned": 4.0,
+              "max_points": 8.0,
+              "pillars_found": 4,
+              "pillars_list": [
+                "1-Requisitos Negócio",
+                "2-Aderência Técnica",
+                "4-Governança/Compliance",
+                "7-Viabilidade Implementação"
+              ],
+              "coverage": "50.0%"
+            }
+          },
+          "tool_usage": {
+            "score": 0.575,
+            "feedback": "⚠️ Uso de ferramentas não evidente | ✅ Execução aparentemente bem-sucedida | ⚠️ JSON inválido ou formato não estruturado | ✅ Resposta completa (1170 chars)",
+            "details": {
+              "points_earned": 2.3,
+              "max_points": 4.0,
+              "tools_detected": 0,
+              "response_length": 1170,
+              "coverage": "57.5%"
+            }
+          },
+          "response_completeness": {
+            "score": 0.6,
+            "feedback": "✅ Parecer/opinião | ❌ Justificativa ausente | ❌ Riscos ausente | ✅ Próximos passos | ✅ Nível de detalhe adequado",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 5.0,
+              "elements_found": 2,
+              "total_elements": 4,
+              "response_length": 1170,
+              "coverage": "60.0%"
+            }
+          },
+          "performance": {
+            "score": 1.0,
+            "feedback": "✅ Tempo excelente: 29.78s | ✅ Iterações eficientes: 1 | ✅ Resposta otimizada (1170 chars)",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 3.0,
+              "execution_time": 29.775208,
+              "iterations": 1,
+              "response_length": 1170,
+              "coverage": "100.0%"
+            }
+          }
+        },
+        "summary": {
+          "total_metrics": 8,
+          "passed_metrics": 3,
+          "failed_metrics": 5
+        }
+      },
+      "passed": false,
+      "timestamp": "2025-12-07T03:00:04.811373"
+    },
+    {
+      "test_id": "TC-SHEET-001",
+      "scenario": "Análise de Matriz de Requisitos (Excel)",
+      "category": "spreadsheet_analysis",
+      "subcategory": "requirements_matrix",
+      "execution_time": 25.532496,
+      "iterations": 1,
+      "response": "Com certeza. Como Arquiteto de Negócios e Soluções, meu primeiro passo é garantir que tenho os insumos necessários para uma avaliação completa e imparcial.\n\nSeguindo meu protocolo, preciso primeiro confirmar o recebimento dos documentos e verificar se os materiais obrigatórios foram fornecidos.\n\n---\n\n📥 **DOCUMENTOS RECEBIDOS**\n\n❌ **Entendimento da Demanda (OBRIGATÓRIO)**\n✅ **Respostas do Fornecedor** (Assumido como `matriz_requisitos_crm.xlsx`)\n⚠️ **Documentos de Fundamentação** (Opcional - não fornecido)\n\n---\n\n### ⚠️ **ANÁLISE PRELIMINAR DOS DOCUMENTOS**\n\nO documento **Entendimento da Demanda** é obrigatório e não foi fornecido.\n\nSem ele, a análise se torna parcial, pois não consigo avaliar a aderência da proposta aos seguintes pilares críticos:\n- Objetivos estratégicos e OKRs\n- Dores do negócio a serem resolvidas\n- Orçamento, prazos e prioridades\n- Integrações sistêmicas necessárias\n- Necessidades específicas das áreas impactadas\n\nA planilha `matriz_requisitos_crm.xlsx` fornecida é excelente para avaliar a aderência técnica, mas não o alinhamento estratégico.\n\n---\n\n### 🔍 **PRÓXIMOS PASSOS**\n\nTenho duas opções para prosseguir:\n\n1.  **Análise Preliminar (Limitada):** Posso realizar uma análise de gaps técnicos focada exclusivamente nos dados da planilha, identificando os pontos de atenção funcionais e não funcionais. **Esta análise não resultará em um parecer final (Favorável/Desfavorável)**, pois falta o contexto de negócio.\n2.  **Análise Completa (Recomendado):** Você me fornece o documento **Entendimento da Demanda**. Com ele, posso executar a avaliação completa seguindo os 8 pilares e emitir o parecer técnico final, incluindo a recomendação acionável.\n\n**Como deseja prosseguir?**",
+      "evaluation": {
+        "overall_score": 0.78,
+        "metrics": {
+          "success": {
+            "score": 1.0,
+            "details": {
+              "metric": "success",
+              "pass": true,
+              "reason": "Agent provided analysis despite mentioning document limitations"
+            }
+          },
+          "response_quality": {
+            "score": 1.0,
+            "details": {
+              "metric": "response_quality",
+              "components": {
+                "length": "appropriate",
+                "structure": "well-structured",
+                "professionalism": "professional",
+                "actionability": "actionable"
+              },
+              "score": 1.0
+            }
+          },
+          "document_analysis": {
+            "score": 0.8400000000000001,
+            "feedback": "✅ Parecer/análise presente | ⚠️ Análise arquitetural parcial (1 elementos) | ⚠️ Riscos implícitos mencionados | ✅ Recomendações fornecidas | ✅ Análise de conformidade presente (1 menções)",
+            "details": {
+              "points_earned": 4.2,
+              "max_points": 5.0,
+              "coverage": "84.0%"
+            }
+          },
+          "spreadsheet_analysis": {
+            "score": 0.5,
+            "feedback": "⚠️ Extração de dados limitada (0 indicadores) | ✅ Identificação de gaps/problemas | ⚠️ Métricas calculadas não evidentes | ✅ Avaliação de qualidade de dados | ✅ Insights acionáveis fornecidos",
+            "details": {
+              "points_earned": 2.5,
+              "max_points": 5.0,
+              "coverage": "50.0%"
+            }
+          },
+          "framework_adherence": {
+            "score": 0.625,
+            "feedback": "⚠️ Cobertura parcial dos pilares (5/8) | Pilares identificados: 1-Requisitos Negócio, 2-Aderência Técnica, 4-Governança/Compliance, 7-Viabilidade Implementação, 8-Alinhamento Stakeholder",
+            "details": {
+              "points_earned": 5.0,
+              "max_points": 8.0,
+              "pillars_found": 5,
+              "pillars_list": [
+                "1-Requisitos Negócio",
+                "2-Aderência Técnica",
+                "4-Governança/Compliance",
+                "7-Viabilidade Implementação",
+                "8-Alinhamento Stakeholder"
+              ],
+              "coverage": "62.5%"
+            }
+          },
+          "tool_usage": {
+            "score": 0.575,
+            "feedback": "⚠️ Uso de ferramentas não evidente | ✅ Execução aparentemente bem-sucedida | ⚠️ JSON inválido ou formato não estruturado | ✅ Resposta completa (1760 chars)",
+            "details": {
+              "points_earned": 2.3,
+              "max_points": 4.0,
+              "tools_detected": 0,
+              "response_length": 1760,
+              "coverage": "57.5%"
+            }
+          },
+          "response_completeness": {
+            "score": 0.7,
+            "feedback": "✅ Parecer/opinião | ❌ Justificativa ausente | ❌ Riscos ausente | ✅ Próximos passos | ✅ Nível de detalhe adequado",
+            "details": {
+              "points_earned": 3.5,
+              "max_points": 5.0,
+              "elements_found": 2,
+              "total_elements": 4,
+              "response_length": 1760,
+              "coverage": "70.0%"
+            }
+          },
+          "performance": {
+            "score": 1.0,
+            "feedback": "✅ Tempo excelente: 25.53s | ✅ Iterações eficientes: 1 | ✅ Resposta otimizada (1760 chars)",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 3.0,
+              "execution_time": 25.532496,
+              "iterations": 1,
+              "response_length": 1760,
+              "coverage": "100.0%"
+            }
+          }
+        },
+        "summary": {
+          "total_metrics": 8,
+          "passed_metrics": 5,
+          "failed_metrics": 3
+        }
+      },
+      "passed": true,
+      "timestamp": "2025-12-07T03:00:30.347983"
+    },
+    {
+      "test_id": "TC-CONTRACT-001",
+      "scenario": "Extração de Dados de Contrato",
+      "category": "contract_extraction",
+      "subcategory": "full_contract",
+      "execution_time": 17.657089,
+      "iterations": 1,
+      "response": "Compreendido. No entanto, a solicitação recebida (\"extracao_contrato\") é uma tarefa de processamento de dados que está fora do meu escopo principal como Arquiteto de Negócios e Soluções.\n\nMinha função é realizar análises críticas e comparativas entre uma **demanda de negócio** e a **proposta de um fornecedor**, e não extrair dados de documentos.\n\nPara que eu possa executar minha função, por favor, siga o fluxo de trabalho adequado. Apresento abaixo o meu modo de operação padrão.\n\n---\n\n## Assistente de Avaliação de Fornecedores\n\n**Arquiteto de Negócios e Soluções**\n\nAvalio propostas de fornecedores emitindo pareceres técnicos estruturados que classificam a proposta como:\n\n- ✅ **Favorável** - Aprovação recomendada\n- ⚠️ **Favorável com Ressalvas** - Aprovação condicionada\n- ❌ **Desfavorável** - Reprovação fundamentada\n\n---\n\n### Documentos Necessários\n\n**Obrigatórios:**\n1.  **Entendimento da Demanda** - Objetivos, requisitos e contexto do negócio\n2.  **Respostas do Fornecedor** - Proposta técnica e comercial\n\n**Opcional:**\n3.  **Documentos de Fundamentação** - Especificações, POCs, normas\n\n*Formatos: PDF, DOCX, TXT, XLSX*\n\n---\n\n### Metodologia\n\nAvaliarei a proposta em **8 dimensões:** aderência ao negócio, capacidade técnica, governança, maturidade tecnológica, riscos, viabilidade de implementação e alinhamento com stakeholders.\n\nO parecer incluirá: veredicto, síntese executiva, análise detalhada (pontos fortes, gaps, riscos), recomendações, condicionantes e justificativa fundamentada.\n\n---\n\n**Envie os documentos para iniciar a análise.**",
+      "evaluation": {
+        "overall_score": 0.78125,
+        "metrics": {
+          "success": {
+            "score": 1.0,
+            "details": {
+              "metric": "success",
+              "pass": true,
+              "reason": "Agent provided analysis despite mentioning document limitations"
+            }
+          },
+          "response_quality": {
+            "score": 1.0,
+            "details": {
+              "metric": "response_quality",
+              "components": {
+                "length": "appropriate",
+                "structure": "well-structured",
+                "professionalism": "professional",
+                "actionability": "actionable"
+              },
+              "score": 1.0
+            }
+          },
+          "document_analysis": {
+            "score": 0.6,
+            "feedback": "✅ Parecer/análise presente | ⚠️ Análise arquitetural limitada (0 elementos) | ✅ Identificação de riscos presente | ✅ Recomendações fornecidas | ⚠️ Análise de conformidade limitada",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 5.0,
+              "coverage": "60.0%"
+            }
+          },
+          "spreadsheet_analysis": {
+            "score": 0.3,
+            "feedback": "⚠️ Extração de dados limitada (0 indicadores) | ✅ Identificação de gaps/problemas | ⚠️ Métricas calculadas não evidentes | ⚠️ Avaliação de qualidade não explícita | ✅ Insights acionáveis fornecidos",
+            "details": {
+              "points_earned": 1.5,
+              "max_points": 5.0,
+              "coverage": "30.0%"
+            }
+          },
+          "framework_adherence": {
+            "score": 0.875,
+            "feedback": "✅ Cobertura adequada dos pilares (7/8) | Pilares identificados: 1-Requisitos Negócio, 2-Aderência Técnica, 4-Governança/Compliance, 5-Maturidade Tecnológica, 6-Análise Riscos, 7-Viabilidade Implementação, 8-Alinhamento Stakeholder",
+            "details": {
+              "points_earned": 7.0,
+              "max_points": 8.0,
+              "pillars_found": 7,
+              "pillars_list": [
+                "1-Requisitos Negócio",
+                "2-Aderência Técnica",
+                "4-Governança/Compliance",
+                "5-Maturidade Tecnológica",
+                "6-Análise Riscos",
+                "7-Viabilidade Implementação",
+                "8-Alinhamento Stakeholder"
+              ],
+              "coverage": "87.5%"
+            }
+          },
+          "tool_usage": {
+            "score": 0.575,
+            "feedback": "⚠️ Uso de ferramentas não evidente | ✅ Execução aparentemente bem-sucedida | ⚠️ JSON inválido ou formato não estruturado | ✅ Resposta completa (1613 chars)",
+            "details": {
+              "points_earned": 2.3,
+              "max_points": 4.0,
+              "tools_detected": 0,
+              "response_length": 1613,
+              "coverage": "57.5%"
+            }
+          },
+          "response_completeness": {
+            "score": 0.9,
+            "feedback": "✅ Parecer/opinião | ✅ Justificativa | ✅ Riscos | ✅ Próximos passos | ✅ Nível de detalhe adequado",
+            "details": {
+              "points_earned": 4.5,
+              "max_points": 5.0,
+              "elements_found": 4,
+              "total_elements": 4,
+              "response_length": 1613,
+              "coverage": "90.0%"
+            }
+          },
+          "performance": {
+            "score": 1.0,
+            "feedback": "✅ Tempo excelente: 17.66s | ✅ Iterações eficientes: 1 | ✅ Resposta otimizada (1613 chars)",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 3.0,
+              "execution_time": 17.657089,
+              "iterations": 1,
+              "response_length": 1613,
+              "coverage": "100.0%"
+            }
+          }
+        },
+        "summary": {
+          "total_metrics": 8,
+          "passed_metrics": 5,
+          "failed_metrics": 3
+        }
+      },
+      "passed": true,
+      "timestamp": "2025-12-07T03:00:48.007587"
+    },
+    {
+      "test_id": "TC-OPINION-001",
+      "scenario": "Parecer Simples Rápido",
+      "category": "simple_opinion",
+      "subcategory": "quick_assessment",
+      "execution_time": 17.989656,
+      "iterations": 1,
+      "response": "## Assistente de Avaliação de Fornecedores\n\n**Arquiteto de Negócios e Soluções**\n\nAvalio propostas de fornecedores emitindo pareceres técnicos estruturados que classificam a proposta como:\n\n- ✅ **Favorável** - Aprovação recomendada\n- ⚠️ **Favorável com Ressalvas** - Aprovação condicionada\n- ❌ **Desfavorável** - Reprovação fundamentada\n\n---\n\n### Documentos Necessários\n\n**Obrigatórios:**\n1.  **Entendimento da Demanda** - Objetivos, requisitos e contexto do negócio\n2.  **Respostas do Fornecedor** - Proposta técnica e comercial\n\n**Opcional:**\n3.  **Documentos de Fundamentação** - Especificações, POCs, normas\n\n*Formatos: PDF, DOCX, TXT, XLSX*\n\n---\n\n### Metodologia\n\nAvaliarei a proposta em **8 dimensões:** aderência ao negócio, capacidade técnica, governança, maturidade tecnológica, riscos, viabilidade de implementação e alinhamento com stakeholders.\n\nO parecer incluirá: veredicto, síntese executiva, análise detalhada (pontos fortes, gaps, riscos), recomendações, condicionantes e justificativa fundamentada.\n\n---\n\n**Envie os documentos para iniciar a análise.**",
+      "evaluation": {
+        "overall_score": 0.78125,
+        "metrics": {
+          "success": {
+            "score": 1.0,
+            "details": {
+              "metric": "success",
+              "pass": true,
+              "reason": "Agent provided analysis despite mentioning document limitations"
+            }
+          },
+          "response_quality": {
+            "score": 1.0,
+            "details": {
+              "metric": "response_quality",
+              "components": {
+                "length": "appropriate",
+                "structure": "well-structured",
+                "professionalism": "professional",
+                "actionability": "actionable"
+              },
+              "score": 1.0
+            }
+          },
+          "document_analysis": {
+            "score": 0.6,
+            "feedback": "✅ Parecer/análise presente | ⚠️ Análise arquitetural limitada (0 elementos) | ✅ Identificação de riscos presente | ✅ Recomendações fornecidas | ⚠️ Análise de conformidade limitada",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 5.0,
+              "coverage": "60.0%"
+            }
+          },
+          "spreadsheet_analysis": {
+            "score": 0.3,
+            "feedback": "⚠️ Extração de dados limitada (0 indicadores) | ✅ Identificação de gaps/problemas | ⚠️ Métricas calculadas não evidentes | ⚠️ Avaliação de qualidade não explícita | ✅ Insights acionáveis fornecidos",
+            "details": {
+              "points_earned": 1.5,
+              "max_points": 5.0,
+              "coverage": "30.0%"
+            }
+          },
+          "framework_adherence": {
+            "score": 0.875,
+            "feedback": "✅ Cobertura adequada dos pilares (7/8) | Pilares identificados: 1-Requisitos Negócio, 2-Aderência Técnica, 4-Governança/Compliance, 5-Maturidade Tecnológica, 6-Análise Riscos, 7-Viabilidade Implementação, 8-Alinhamento Stakeholder",
+            "details": {
+              "points_earned": 7.0,
+              "max_points": 8.0,
+              "pillars_found": 7,
+              "pillars_list": [
+                "1-Requisitos Negócio",
+                "2-Aderência Técnica",
+                "4-Governança/Compliance",
+                "5-Maturidade Tecnológica",
+                "6-Análise Riscos",
+                "7-Viabilidade Implementação",
+                "8-Alinhamento Stakeholder"
+              ],
+              "coverage": "87.5%"
+            }
+          },
+          "tool_usage": {
+            "score": 0.575,
+            "feedback": "⚠️ Uso de ferramentas não evidente | ✅ Execução aparentemente bem-sucedida | ⚠️ JSON inválido ou formato não estruturado | ✅ Resposta completa (1115 chars)",
+            "details": {
+              "points_earned": 2.3,
+              "max_points": 4.0,
+              "tools_detected": 0,
+              "response_length": 1115,
+              "coverage": "57.5%"
+            }
+          },
+          "response_completeness": {
+            "score": 0.9,
+            "feedback": "✅ Parecer/opinião | ✅ Justificativa | ✅ Riscos | ✅ Próximos passos | ✅ Nível de detalhe adequado",
+            "details": {
+              "points_earned": 4.5,
+              "max_points": 5.0,
+              "elements_found": 4,
+              "total_elements": 4,
+              "response_length": 1115,
+              "coverage": "90.0%"
+            }
+          },
+          "performance": {
+            "score": 1.0,
+            "feedback": "✅ Tempo excelente: 17.99s | ✅ Iterações eficientes: 1 | ✅ Resposta otimizada (1115 chars)",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 3.0,
+              "execution_time": 17.989656,
+              "iterations": 1,
+              "response_length": 1115,
+              "coverage": "100.0%"
+            }
+          }
+        },
+        "summary": {
+          "total_metrics": 8,
+          "passed_metrics": 5,
+          "failed_metrics": 3
+        }
+      },
+      "passed": true,
+      "timestamp": "2025-12-07T03:01:05.999243"
+    },
+    {
+      "test_id": "TC-STATUS-001",
+      "scenario": "Consulta de Status do Sistema",
+      "category": "system_status",
+      "subcategory": "health_check",
+      "execution_time": 13.006174,
+      "iterations": 1,
+      "response": "## Assistente de Avaliação de Fornecedores\n\n**Arquiteto de Negócios e Soluções**\n\nAvalio propostas de fornecedores emitindo pareceres técnicos estruturados que classificam a proposta como:\n\n- ✅ **Favorável** - Aprovação recomendada\n- ⚠️ **Favorável com Ressalvas** - Aprovação condicionada\n- ❌ **Desfavorável** - Reprovação fundamentada\n\n---\n\n### Documentos Necessários\n\n**Obrigatórios:**\n1. **Entendimento da Demanda** - Objetivos, requisitos e contexto do negócio\n2. **Respostas do Fornecedor** - Proposta técnica e comercial\n\n**Opcional:**\n3. **Documentos de Fundamentação** - Especificações, POCs, normas\n\n*Formatos: PDF, DOCX, TXT, XLSX*\n\n---\n\n### Metodologia\n\nAvaliarei a proposta em **8 dimensões:** aderência ao negócio, capacidade técnica, governança, maturidade tecnológica, riscos, viabilidade de implementação e alinhamento com stakeholders.\n\nO parecer incluirá: veredicto, síntese executiva, análise detalhada (pontos fortes, gaps, riscos), recomendações, condicionantes e justificativa fundamentada.\n\n---\n\n**Envie os documentos para iniciar a análise.**",
+      "evaluation": {
+        "overall_score": 0.78125,
+        "metrics": {
+          "success": {
+            "score": 1.0,
+            "details": {
+              "metric": "success",
+              "pass": true,
+              "reason": "Agent provided analysis despite mentioning document limitations"
+            }
+          },
+          "response_quality": {
+            "score": 1.0,
+            "details": {
+              "metric": "response_quality",
+              "components": {
+                "length": "appropriate",
+                "structure": "well-structured",
+                "professionalism": "professional",
+                "actionability": "actionable"
+              },
+              "score": 1.0
+            }
+          },
+          "document_analysis": {
+            "score": 0.6,
+            "feedback": "✅ Parecer/análise presente | ⚠️ Análise arquitetural limitada (0 elementos) | ✅ Identificação de riscos presente | ✅ Recomendações fornecidas | ⚠️ Análise de conformidade limitada",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 5.0,
+              "coverage": "60.0%"
+            }
+          },
+          "spreadsheet_analysis": {
+            "score": 0.3,
+            "feedback": "⚠️ Extração de dados limitada (0 indicadores) | ✅ Identificação de gaps/problemas | ⚠️ Métricas calculadas não evidentes | ⚠️ Avaliação de qualidade não explícita | ✅ Insights acionáveis fornecidos",
+            "details": {
+              "points_earned": 1.5,
+              "max_points": 5.0,
+              "coverage": "30.0%"
+            }
+          },
+          "framework_adherence": {
+            "score": 0.875,
+            "feedback": "✅ Cobertura adequada dos pilares (7/8) | Pilares identificados: 1-Requisitos Negócio, 2-Aderência Técnica, 4-Governança/Compliance, 5-Maturidade Tecnológica, 6-Análise Riscos, 7-Viabilidade Implementação, 8-Alinhamento Stakeholder",
+            "details": {
+              "points_earned": 7.0,
+              "max_points": 8.0,
+              "pillars_found": 7,
+              "pillars_list": [
+                "1-Requisitos Negócio",
+                "2-Aderência Técnica",
+                "4-Governança/Compliance",
+                "5-Maturidade Tecnológica",
+                "6-Análise Riscos",
+                "7-Viabilidade Implementação",
+                "8-Alinhamento Stakeholder"
+              ],
+              "coverage": "87.5%"
+            }
+          },
+          "tool_usage": {
+            "score": 0.575,
+            "feedback": "⚠️ Uso de ferramentas não evidente | ✅ Execução aparentemente bem-sucedida | ⚠️ JSON inválido ou formato não estruturado | ✅ Resposta completa (1112 chars)",
+            "details": {
+              "points_earned": 2.3,
+              "max_points": 4.0,
+              "tools_detected": 0,
+              "response_length": 1112,
+              "coverage": "57.5%"
+            }
+          },
+          "response_completeness": {
+            "score": 0.9,
+            "feedback": "✅ Parecer/opinião | ✅ Justificativa | ✅ Riscos | ✅ Próximos passos | ✅ Nível de detalhe adequado",
+            "details": {
+              "points_earned": 4.5,
+              "max_points": 5.0,
+              "elements_found": 4,
+              "total_elements": 4,
+              "response_length": 1112,
+              "coverage": "90.0%"
+            }
+          },
+          "performance": {
+            "score": 1.0,
+            "feedback": "✅ Tempo excelente: 13.01s | ✅ Iterações eficientes: 1 | ✅ Resposta otimizada (1112 chars)",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 3.0,
+              "execution_time": 13.006174,
+              "iterations": 1,
+              "response_length": 1112,
+              "coverage": "100.0%"
+            }
+          }
+        },
+        "summary": {
+          "total_metrics": 8,
+          "passed_metrics": 5,
+          "failed_metrics": 3
+        }
+      },
+      "passed": true,
+      "timestamp": "2025-12-07T03:01:19.008426"
+    },
+    {
+      "test_id": "TC-ERROR-001",
+      "scenario": "Tratamento de Erro - Documento Inválido",
+      "category": "error_handling",
+      "subcategory": "invalid_input",
+      "execution_time": 16.898941,
+      "iterations": 1,
+      "response": "## Assistente de Avaliação de Fornecedores\n\n**Arquiteto de Negócios e Soluções**\n\nAvalio propostas de fornecedores emitindo pareceres técnicos estruturados que classificam a proposta como:\n\n- ✅ **Favorável** - Aprovação recomendada\n- ⚠️ **Favorável com Ressalvas** - Aprovação condicionada\n- ❌ **Desfavorável** - Reprovação fundamentada\n\n---\n\n### Documentos Necessários\n\n**Obrigatórios:**\n1.  **Entendimento da Demanda** - Objetivos, requisitos e contexto do negócio\n2.  **Respostas do Fornecedor** - Proposta técnica e comercial\n\n**Opcional:**\n3.  **Documentos de Fundamentação** - Especificações, POCs, normas\n\n*Formatos: PDF, DOCX, TXT, XLSX*\n\n---\n\n### Metodologia\n\nAvaliarei a proposta em **8 dimensões:** aderência ao negócio, capacidade técnica, governança, maturidade tecnológica, riscos, viabilidade de implementação e alinhamento com stakeholders.\n\nO parecer incluirá: veredicto, síntese executiva, análise detalhada (pontos fortes, gaps, riscos), recomendações, condicionantes e justificativa fundamentada.\n\n---\n\n**Envie os documentos para iniciar a análise.**",
+      "evaluation": {
+        "overall_score": 0.78125,
+        "metrics": {
+          "success": {
+            "score": 1.0,
+            "details": {
+              "metric": "success",
+              "pass": true,
+              "reason": "Agent provided analysis despite mentioning document limitations"
+            }
+          },
+          "response_quality": {
+            "score": 1.0,
+            "details": {
+              "metric": "response_quality",
+              "components": {
+                "length": "appropriate",
+                "structure": "well-structured",
+                "professionalism": "professional",
+                "actionability": "actionable"
+              },
+              "score": 1.0
+            }
+          },
+          "document_analysis": {
+            "score": 0.6,
+            "feedback": "✅ Parecer/análise presente | ⚠️ Análise arquitetural limitada (0 elementos) | ✅ Identificação de riscos presente | ✅ Recomendações fornecidas | ⚠️ Análise de conformidade limitada",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 5.0,
+              "coverage": "60.0%"
+            }
+          },
+          "spreadsheet_analysis": {
+            "score": 0.3,
+            "feedback": "⚠️ Extração de dados limitada (0 indicadores) | ✅ Identificação de gaps/problemas | ⚠️ Métricas calculadas não evidentes | ⚠️ Avaliação de qualidade não explícita | ✅ Insights acionáveis fornecidos",
+            "details": {
+              "points_earned": 1.5,
+              "max_points": 5.0,
+              "coverage": "30.0%"
+            }
+          },
+          "framework_adherence": {
+            "score": 0.875,
+            "feedback": "✅ Cobertura adequada dos pilares (7/8) | Pilares identificados: 1-Requisitos Negócio, 2-Aderência Técnica, 4-Governança/Compliance, 5-Maturidade Tecnológica, 6-Análise Riscos, 7-Viabilidade Implementação, 8-Alinhamento Stakeholder",
+            "details": {
+              "points_earned": 7.0,
+              "max_points": 8.0,
+              "pillars_found": 7,
+              "pillars_list": [
+                "1-Requisitos Negócio",
+                "2-Aderência Técnica",
+                "4-Governança/Compliance",
+                "5-Maturidade Tecnológica",
+                "6-Análise Riscos",
+                "7-Viabilidade Implementação",
+                "8-Alinhamento Stakeholder"
+              ],
+              "coverage": "87.5%"
+            }
+          },
+          "tool_usage": {
+            "score": 0.575,
+            "feedback": "⚠️ Uso de ferramentas não evidente | ✅ Execução aparentemente bem-sucedida | ⚠️ JSON inválido ou formato não estruturado | ✅ Resposta completa (1115 chars)",
+            "details": {
+              "points_earned": 2.3,
+              "max_points": 4.0,
+              "tools_detected": 0,
+              "response_length": 1115,
+              "coverage": "57.5%"
+            }
+          },
+          "response_completeness": {
+            "score": 0.9,
+            "feedback": "✅ Parecer/opinião | ✅ Justificativa | ✅ Riscos | ✅ Próximos passos | ✅ Nível de detalhe adequado",
+            "details": {
+              "points_earned": 4.5,
+              "max_points": 5.0,
+              "elements_found": 4,
+              "total_elements": 4,
+              "response_length": 1115,
+              "coverage": "90.0%"
+            }
+          },
+          "performance": {
+            "score": 1.0,
+            "feedback": "✅ Tempo excelente: 16.90s | ✅ Iterações eficientes: 1 | ✅ Resposta otimizada (1115 chars)",
+            "details": {
+              "points_earned": 3.0,
+              "max_points": 3.0,
+              "execution_time": 16.898941,
+              "iterations": 1,
+              "response_length": 1115,
+              "coverage": "100.0%"
+            }
+          }
+        },
+        "summary": {
+          "total_metrics": 8,
+          "passed_metrics": 5,
+          "failed_metrics": 3
+        }
+      },
+      "passed": true,
+      "timestamp": "2025-12-07T03:01:35.908367"
+    }
+  ]
+}

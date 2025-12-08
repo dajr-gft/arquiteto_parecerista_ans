@@ -1,0 +1,78 @@
+{
+  "timestamp": "20251207_022922",
+  "total_tests": 7,
+  "passed": 0,
+  "failed": 7,
+  "results": [
+    {
+      "test_id": "TC-DOC-001",
+      "scenario": "Análise de Especificação Técnica Completa",
+      "category": "document_analysis",
+      "subcategory": "technical_specification",
+      "execution_time": 0.002,
+      "error": "name 'UserContent' is not defined",
+      "passed": false,
+      "timestamp": "2025-12-07T02:29:22.194361"
+    },
+    {
+      "test_id": "TC-DOC-002",
+      "scenario": "Análise de Proposta Comercial de Fornecedor",
+      "category": "document_analysis",
+      "subcategory": "vendor_proposal",
+      "execution_time": 0.0,
+      "error": "name 'UserContent' is not defined",
+      "passed": false,
+      "timestamp": "2025-12-07T02:29:22.194361"
+    },
+    {
+      "test_id": "TC-SHEET-001",
+      "scenario": "Análise de Matriz de Requisitos (Excel)",
+      "category": "spreadsheet_analysis",
+      "subcategory": "requirements_matrix",
+      "execution_time": 0.0,
+      "error": "name 'UserContent' is not defined",
+      "passed": false,
+      "timestamp": "2025-12-07T02:29:22.194872"
+    },
+    {
+      "test_id": "TC-CONTRACT-001",
+      "scenario": "Extração de Dados de Contrato",
+      "category": "contract_extraction",
+      "subcategory": "full_contract",
+      "execution_time": 0.0,
+      "error": "name 'UserContent' is not defined",
+      "passed": false,
+      "timestamp": "2025-12-07T02:29:22.194872"
+    },
+    {
+      "test_id": "TC-OPINION-001",
+      "scenario": "Parecer Simples Rápido",
+      "category": "simple_opinion",
+      "subcategory": "quick_assessment",
+      "execution_time": 0.0,
+      "error": "name 'UserContent' is not defined",
+      "passed": false,
+      "timestamp": "2025-12-07T02:29:22.194872"
+    },
+    {
+      "test_id": "TC-STATUS-001",
+      "scenario": "Consulta de Status do Sistema",
+      "category": "system_status",
+      "subcategory": "health_check",
+      "execution_time": 0.0,
+      "error": "name 'UserContent' is not defined",
+      "passed": false,
+      "timestamp": "2025-12-07T02:29:22.194872"
+    },
+    {
+      "test_id": "TC-ERROR-001",
+      "scenario": "Tratamento de Erro - Documento Inválido",
+      "category": "error_handling",
+      "subcategory": "invalid_input",
+      "execution_time": 0.0,
+      "error": "name 'UserContent' is not defined",
+      "passed": false,
+      "timestamp": "2025-12-07T02:29:22.194872"
+    }
+  ]
+}

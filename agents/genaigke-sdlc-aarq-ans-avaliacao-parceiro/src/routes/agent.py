@@ -1,4 +1,5 @@
 import os
+import sys
 import uuid
 import logging
 import time
@@ -16,9 +17,20 @@ from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 from google.genai import types
 
-from .prompt import ANS_PROMPT
-from ..utils.security import validate_file_security, validate_files_count
-from ..utils.audit import log_request_audit, log_response_audit
+# Add src directory to path for imports
+src_path = Path(__file__).parent.parent
+if str(src_path) not in sys.path:
+    sys.path.insert(0, str(src_path))
+
+from routes.prompt import ANS_PROMPT
+
+# Import utils - try relative first, fallback to direct import
+try:
+    from ..utils.security import validate_file_security, validate_files_count
+    from ..utils.audit import log_request_audit, log_response_audit
+except ImportError:
+    from utils.security import validate_file_security, validate_files_count
+    from utils.audit import log_request_audit, log_response_audit
 
 # Configure structured logging
 logging.basicConfig(
@@ -82,7 +94,29 @@ root_agent = LlmAgent(
     instruction=ANS_PROMPT
 )
 
+# Validate critical environment variables
+def validate_environment_variables() -> None:
+    """
+    Validate that all critical environment variables are set.
+    Raises ValueError if any required variable is missing.
+    """
+    required_vars = {
+        "GOOGLE_CLOUD_PROJECT": "Google Cloud Project ID is required for Vertex AI",
+        "GOOGLE_CLOUD_LOCATION": "Google Cloud Location is required for Vertex AI",
+        "GOOGLE_GENAI_USE_VERTEXAI": "Vertex AI flag must be set"
+    }
 
+    missing_vars = []
+    for var, description in required_vars.items():
+        if not os.getenv(var):
+            missing_vars.append(f"{var}: {description}")
+
+    if missing_vars:
+        error_msg = "Missing required environment variables:\n" + "\n".join(f"  - {var}" for var in missing_vars)
+        logger.error(error_msg)
+        raise ValueError(error_msg)
+
+    logger.info("All required environment variables validated successfully")
 
 async def agent(text: str = None, files: List[UploadFile] = None):
     """

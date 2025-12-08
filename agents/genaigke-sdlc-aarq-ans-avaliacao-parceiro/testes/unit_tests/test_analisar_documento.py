@@ -26,7 +26,7 @@ async def test_analisar_documento_with_txt():
 
             file = Mock()
             file.filename = "doc.txt"
-            file.read = AsyncMock(return_value=b"content")
+            file.content = b"content"
 
             result = analisar_documento_parecer(file)
             assert result is not None
